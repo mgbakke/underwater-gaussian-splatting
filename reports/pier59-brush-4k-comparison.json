@@ -1,0 +1,81 @@
+{
+  "objective": "Rebuild the Pier 59 pilot from the original 4K source and maximize retained close-view detail while preserving complete coverage.",
+  "selected_model": "pier59-brush-4k-high-quality-25k",
+  "source": {
+    "path": "/Users/marcusbakke/Downloads/2022_6_23_downward.mp4",
+    "source_resolution": [3840, 2160],
+    "source_sha256": "77dc9775659edde233ca4ef55c6b2687e57c958aed8c7c35130ee69a76725103",
+    "interval_seconds": [136, 179],
+    "extraction_rate_fps": 3,
+    "extracted_frames": 129,
+    "extracted_frame_bytes": 78138963,
+    "aggregate_frame_sha256": "2e9471f40a7193014e4b733950b977f59ea4d7b07fa7b9e0c6f91b059643c78c"
+  },
+  "registration": {
+    "registered_images": 129,
+    "registered_percentage": 100.0,
+    "sparse_points": 75675,
+    "observations": 516517,
+    "mean_track_length": 6.825464155929963,
+    "mean_reprojection_error_pixels": 1.0957347974660876,
+    "endpoint_displacement_to_path_length": 0.952882,
+    "total_seconds": 452.555,
+    "report": "reports/pier59-video-4k-sfm.json"
+  },
+  "training": {
+    "steps": 25000,
+    "input_images": 129,
+    "input_resolution": [3856, 2162],
+    "render_resolution": [3840, 2153],
+    "wall_clock_seconds": 3786.128,
+    "maximum_resident_set_size_bytes": 5541478400,
+    "peak_memory_footprint_bytes": 10612445360,
+    "swaps": 0,
+    "final_splats": 1137559,
+    "final_ply_bytes": 268465476,
+    "final_ply_sha256": "23e30f44fdc25866540545d87d20b4b18ff8d3fb8ad490ebfdf2a0e6796d8796",
+    "report": "reports/pier59-brush-4k-high-quality-training.json"
+  },
+  "evaluation": {
+    "held_out_views": 13,
+    "mean_psnr_db": 32.9062,
+    "mean_absolute_error_0_255": 4.185,
+    "mean_global_ssim": 0.96731,
+    "mean_sharpness_ratio": 0.3586,
+    "mean_luminance_contrast_ratio": 0.9848,
+    "mean_excess_dark_pixel_fraction": 0.0,
+    "best_view": {
+      "image": "000010.png",
+      "psnr_db": 36.5975
+    },
+    "worst_view": {
+      "image": "000050.png",
+      "psnr_db": 29.0152
+    },
+    "report": "reports/pier59-brush-4k-high-quality-evaluation.json"
+  },
+  "matched_timestamp_diagnostic": {
+    "description": "Five nominally time-aligned views at 0, 10, 20, 30, and 40 seconds, with both renders and 4K ground truth resized to 1920x1076.",
+    "baseline_1920_model": {
+      "mean_psnr_db": 25.0839,
+      "mean_absolute_error_0_255": 9.0345,
+      "mean_render_laplacian_variance": 16.9846,
+      "mean_luminance_contrast_ratio": 0.9815
+    },
+    "native_4k_model": {
+      "mean_psnr_db": 33.1767,
+      "mean_absolute_error_0_255": 3.9055,
+      "mean_render_laplacian_variance": 31.5808,
+      "mean_luminance_contrast_ratio": 0.9894
+    }
+  },
+  "visual_assessment": {
+    "detail": "Matched close crops preserve substantially finer shell edges, rock texture, and small highlights than the upscaled 1920 model.",
+    "coverage": "All held-out views retain complete coverage with zero measured excess-dark pixels.",
+    "haze": "Moderate opacity and scale regularization avoids obvious translucent buildup, but source-water backscatter and green cast remain visible.",
+    "limitations": "Extreme off-trajectory and closer-than-captured viewpoints remain soft because their geometry and texture were not observed by the source camera."
+  },
+  "local_final_ply": "data/training/pier59-brush-4k-high-quality-25k/pier59-4k-high-quality-25000.ply",
+  "local_comparison_image": "data/training/pier59-brush-4k-close-detail-comparison.jpg",
+  "artifacts_committed": false
+}

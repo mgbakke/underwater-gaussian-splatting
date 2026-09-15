@@ -37,6 +37,11 @@ without measurable dark-hole growth. Training outputs remain ignored under
 `data/training/`; committed measurements and the tuning comparison are in
 `reports/pier59-brush-*.json`.
 
+The highest-quality local result rebuilds the interval directly from the
+original 3840×2160 video at 3 fps. Its 129/129 camera registration feeds a
+25,000-step, 3840-pixel Brush run with 1,137,559 final splats. The concise
+cross-resolution report is `reports/pier59-brush-4k-comparison.json`.
+
 ## Aquarium-specific evaluation order
 
 The following projects are **optional references, not installed or executed by this pilot**. Confirm each upstream license at the pinned revision before integration.

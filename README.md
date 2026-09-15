@@ -79,6 +79,11 @@ committed in `reports/pier59-brush-high-quality-training.json`,
 `reports/pier59-brush-high-quality-evaluation.json`, and
 `reports/pier59-brush-quality-comparison.json`.
 
+A native-4K follow-up extracts 129 frames at 3 fps directly from the original
+3840×2160 video, registers all 129 cameras, and trains at 3840 px for 25,000
+steps. Its final 1,137,559-splat PLY and renders also remain local-only. See
+`reports/pier59-brush-4k-comparison.json` for the concise result.
+
 ## Data policy
 
 `data/raw/`, `data/processed/`, `data/colmap/`, contact sheets, and other generated media are gitignored. Do not commit Seattle Aquarium source media. The Hugging Face still-image dataset is licensed **CC BY-NC 4.0**; attribute Seattle Aquarium Coastal Climate Resilience and preserve the non-commercial restriction. The linked ROV video index does not state that its videos use the same license, so verify permission and intended use with Seattle Aquarium before redistribution or publication.

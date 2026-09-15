@@ -247,3 +247,63 @@ It contains 1,500,000 splats, is 354,001,552 bytes, and has SHA-256
 `0661d3a8319a795b2b5a5d1eadc4b4d83bf5e9a96091743e307e926c12b0defe`.
 All preview/final PLYs, evaluation renders, and local comparison sheets remain
 ignored because the source video's redistribution license is unspecified.
+
+## Native-4K result
+
+The final quality pass bypassed the 1080p intermediate and decoded the same
+136–179 second interval directly from the verified 3840×2160 source:
+
+```bash
+VIDEO_SOURCE="$HOME/Downloads/2022_6_23_downward.mp4" \
+  python scripts/pilot_data.py \
+    --config configs/pilot-4k.json \
+    extract-video-frames
+python scripts/pilot_data.py \
+  --config configs/pilot-4k.json \
+  quality-report --target video
+python scripts/pilot_data.py \
+  --config configs/pilot-4k.json \
+  prepare-colmap --target video
+python scripts/run_sfm.py --clean \
+  --images data/colmap/pier59-video-4k-pilot/images \
+  --workspace data/sfm/pier59-video-4k-pilot \
+  --report reports/pier59-video-4k-sfm.json \
+  --max-image-size 3200
+BRUSH=/tmp/brush-app-aarch64-apple-darwin/brush_app \
+  python scripts/run_brush.py \
+    --config configs/brush-pier59-4k-high-quality.json \
+    --clean
+```
+
+The source checksum was verified before extraction. This produced 129 JPEGs at
+3840×2160 and 3 fps, totaling 78,138,963 bytes, with no exact duplicates.
+COLMAP registered 129/129 images in one model with 75,675 sparse points,
+516,517 observations, 6.825 mean track length, and 1.096 px mean reprojection
+error. Registration and undistortion took 452.555 seconds.
+
+The 25,000-step Brush run used 129 undistorted images at 3856×2162, rendered at
+3840×2153, and completed in 3,786.128 seconds (63 minutes 6 seconds). Maximum
+RSS was 5,541,478,400 bytes, peak memory footprint was 10,612,445,360 bytes,
+and no swaps occurred. The final model contains 1,137,559 splats:
+
+`data/training/pier59-brush-4k-high-quality-25k/pier59-4k-high-quality-25000.ply`
+
+The PLY is 268,465,476 bytes with SHA-256
+`23e30f44fdc25866540545d87d20b4b18ff8d3fb8ad490ebfdf2a0e6796d8796`.
+
+Across 13 held-out views, the final result reached 32.9062 dB mean PSNR,
+4.1850 mean absolute error, 0.967310 global SSIM proxy, 0.9848 luminance
+contrast ratio, and zero excess-dark pixel fraction. A five-view,
+nominally time-aligned comparison at common 1920×1076 resolution increased
+rendered Laplacian variance from 16.9846 to 31.5808 and improved PSNR from
+25.0839 to 33.1767 dB relative to the prior 1920-source model.
+
+Visual inspection of matched close crops confirms substantially finer shell
+edges, rock texture, and small highlights without visible holes. The remaining
+haze and green cast are present in the source water column; extreme
+off-trajectory or closer-than-recorded viewpoints remain limited by capture
+coverage. Exact data, reconstruction, training, and evaluation records are in
+`reports/pier59-video-4k-quality.json`,
+`reports/pier59-video-4k-sfm.json`,
+`reports/pier59-brush-4k-high-quality-training.json`, and
+`reports/pier59-brush-4k-high-quality-evaluation.json`.

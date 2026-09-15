@@ -1,0 +1,437 @@
+{
+  "name": "pier59-brush-4k-high-quality-25k",
+  "status": "completed",
+  "return_code": 0,
+  "started_at": "2026-09-14T19:47:44-07:00",
+  "completed_at": "2026-09-14T20:50:50-07:00",
+  "wall_clock_seconds": 3786.128,
+  "host": {
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "machine": "arm64"
+  },
+  "brush": {
+    "version": "0.3.0",
+    "binary_path": "/private/tmp/brush-check/brush-app-aarch64-apple-darwin/brush_app",
+    "archive_sha256": "65b2631398c839be3c1d4d7160fe2326389dec87830aac0710985e6690a1048c"
+  },
+  "input": {
+    "path": "data/sfm/pier59-video-4k-pilot/undistorted",
+    "image_count": 129,
+    "image_resolution": [
+      3856,
+      2162
+    ]
+  },
+  "parameters": {
+    "total_steps": 25000,
+    "max_resolution": 3840,
+    "max_frames": 129,
+    "max_splats": 3000000,
+    "growth_stop_iter": 18000,
+    "refine_every": 150,
+    "growth_select_fraction": 0.12,
+    "opac_loss_weight": 3e-09,
+    "scale_loss_weight": 3e-08,
+    "eval_split_every": 10,
+    "eval_every": 5000,
+    "export_every": 10000,
+    "export_name": "pier59-4k-high-quality-{iter}.ply"
+  },
+  "command": [
+    "/private/tmp/brush-check/brush-app-aarch64-apple-darwin/brush_app",
+    "--total-steps",
+    "25000",
+    "--max-resolution",
+    "3840",
+    "--max-frames",
+    "129",
+    "--max-splats",
+    "3000000",
+    "--growth-stop-iter",
+    "18000",
+    "--refine-every",
+    "150",
+    "--growth-select-fraction",
+    "0.12",
+    "--opac-loss-weight",
+    "3e-09",
+    "--scale-loss-weight",
+    "3e-08",
+    "--eval-split-every",
+    "10",
+    "--eval-every",
+    "5000",
+    "--eval-save-to-disk",
+    "--export-every",
+    "10000",
+    "--export-path",
+    "/Users/marcusbakke/.copilot/repos/copilot-worktrees/underwater-gaussian-splatting/mgbakke-literate-broccoli/data/training/pier59-brush-4k-high-quality-25k",
+    "--export-name",
+    "pier59-4k-high-quality-{iter}.ply",
+    "/Users/marcusbakke/.copilot/repos/copilot-worktrees/underwater-gaussian-splatting/mgbakke-literate-broccoli/data/sfm/pier59-video-4k-pilot/undistorted"
+  ],
+  "resource_usage": {
+    "maximum_resident_set_size_bytes": 5541478400,
+    "peak_memory_footprint_bytes": 10612445360,
+    "page_reclaims": 153560028,
+    "page_faults": 1011,
+    "swaps": 0
+  },
+  "local_artifacts": {
+    "output_directory": "data/training/pier59-brush-4k-high-quality-25k",
+    "file_count": 70,
+    "total_bytes": 1144894980,
+    "training_log": "data/training/pier59-brush-4k-high-quality-25k/training.log",
+    "resource_usage": "data/training/pier59-brush-4k-high-quality-25k/resource-usage.txt",
+    "evaluation_render_resolution": [
+      3840,
+      2153
+    ],
+    "files": [
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_10000/000000.png",
+        "bytes": 6190268,
+        "sha256": "f1eda351360f6026eb578696a22f4ff82a099c5b8a3ac7159e34e86af7f42d2a"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_10000/000010.png",
+        "bytes": 5872519,
+        "sha256": "e821eb2a59adc121a64b1a38458426c73f3925f5be2db51fd2619b250b07ce70"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_10000/000020.png",
+        "bytes": 5975048,
+        "sha256": "df8bcebf6744824ba41cd6a6892454642fc056a9e684fb86dd5af76540574a38"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_10000/000030.png",
+        "bytes": 6213657,
+        "sha256": "212cb96aec9d67107722ece8bbe45884bd1b79def3f95210caca517032f0a406"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_10000/000040.png",
+        "bytes": 6542891,
+        "sha256": "af31db1fb8f7aa2377a61eb7a6e0f6411399790b4f99f019154e7a8812ebf351"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_10000/000050.png",
+        "bytes": 6760547,
+        "sha256": "bb52c754e20f7fa08b42f19aad768ef1f5b7596f796f2ba345817e473fbf4438"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_10000/000060.png",
+        "bytes": 6861259,
+        "sha256": "2b3f0394a44333dd9316cf1be1671d00a6ab4224cad827b2ed7db3b48dd12eed"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_10000/000070.png",
+        "bytes": 6823526,
+        "sha256": "84c09e5f873370d9d30486f14a0680119741706ec8f5dd6c73d38e40abc59c6b"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_10000/000080.png",
+        "bytes": 6697528,
+        "sha256": "c8080aa9cc6dd62aa94264efb7f8248a3acd0442aba5e8aa8a692ca1d1bf2ea7"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_10000/000090.png",
+        "bytes": 6784866,
+        "sha256": "6f1b5809aa00a288fc3fad743df0937fa775c6c7e268134cd6f363964554c75d"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_10000/000100.png",
+        "bytes": 6840048,
+        "sha256": "56062234f81f42afe0a02776da087355d98796ff7dbfe427883c7102f3355bd6"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_10000/000110.png",
+        "bytes": 6367426,
+        "sha256": "22288489c6227db389ddabc48e5af749358d7c6588cede111dc547b9ab129bf9"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_10000/000120.png",
+        "bytes": 6043306,
+        "sha256": "800794f738a59d3811c859e3b35c9a1df24cbf82b94014d55382d5f0001a33be"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_15000/000000.png",
+        "bytes": 6430337,
+        "sha256": "4f7eae9c00aae289a9cb691a9a1933dc4dfb233689ce788e73556ceefaae3d2c"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_15000/000010.png",
+        "bytes": 5959256,
+        "sha256": "5399f5de706ccd7cba9431bd9b18fb8a3c225e3764f4bcda5f9bbcd2d6fee222"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_15000/000020.png",
+        "bytes": 6100926,
+        "sha256": "245f76f535706e6c257ddacceb2120408ad3502b1d57a8f6c463be032b7358d4"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_15000/000030.png",
+        "bytes": 6321346,
+        "sha256": "76ab2dba645dcf21e1171347911c3024c696556b37dcef0b0d9e4ac670cd6145"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_15000/000040.png",
+        "bytes": 6655977,
+        "sha256": "4e5f3a6fd2efbf052d1b0f6f14678a52bef05b388d3d47d48c857286fb62d10f"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_15000/000050.png",
+        "bytes": 6889576,
+        "sha256": "b625e8e6a21050de449a94298d9b809b40137869e01afcf3e541b7813a2ef048"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_15000/000060.png",
+        "bytes": 6916961,
+        "sha256": "2b75e7465284f386bb5fae27d0b836dd1f5c80aea081f181c36977a1f336582e"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_15000/000070.png",
+        "bytes": 6925267,
+        "sha256": "02998cbec86066220603bc557ae7b74a4b4c88f8a2e9eb6e78f107dfb7c03560"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_15000/000080.png",
+        "bytes": 6751769,
+        "sha256": "2d97b636061bc9e57f076fbf16bd6b7e6eb90229bd441e8c069350a24ce2ffb2"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_15000/000090.png",
+        "bytes": 6850312,
+        "sha256": "6493d59948eb94bf0623736ae6cb401c9ca22e739cbb1643a7e26f6afb6b0f2c"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_15000/000100.png",
+        "bytes": 6932812,
+        "sha256": "f065d85b0a92c425a1ad2d2679e154f606838acca7c08115a0fc6ff5e267f549"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_15000/000110.png",
+        "bytes": 6478990,
+        "sha256": "fb96b7612b11b911308b1201a29d873a11568ad0ba7109d99dc62ac32f2a5237"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_15000/000120.png",
+        "bytes": 6163361,
+        "sha256": "989508b7925f3793bf61f56739501e3021bde91e433914068688ccf2dd9c0f10"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_20000/000000.png",
+        "bytes": 6493777,
+        "sha256": "359bd08d0a111aa8803925d2a813ae500efaf354c767b86fc8bbe33e9d4053ff"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_20000/000010.png",
+        "bytes": 5951569,
+        "sha256": "eacfbdf1394c99def936ec66a12214e6903eb874cc7f43eebe4dfb724d8c2ac3"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_20000/000020.png",
+        "bytes": 6083759,
+        "sha256": "f20c51dca588d4876bf0897a98f7957a6a74e943873c709be45bba3e4bc7cf22"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_20000/000030.png",
+        "bytes": 6316753,
+        "sha256": "b4f97b484addcb2105311d221442d472634d337fe0f9a0035be4f5676d74fd68"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_20000/000040.png",
+        "bytes": 6666862,
+        "sha256": "4a21a1088fb36d4f9287ec5bb40e1ef47503f228836ebb1f2d35f97762861e71"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_20000/000050.png",
+        "bytes": 6890947,
+        "sha256": "a13c376e5ca21ca63ab2c15f37ec5a30143dfaf1b4b63887a78779cb8792dfc9"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_20000/000060.png",
+        "bytes": 6944067,
+        "sha256": "6770ce1b1e3ec38e72e09d77cf44de0f3d1df1994568036e27266d791f04658e"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_20000/000070.png",
+        "bytes": 6918270,
+        "sha256": "623790f604f75cb6f3389de53fb10dcce3d1686fadccd70b8b120a7a6e38fe12"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_20000/000080.png",
+        "bytes": 6753463,
+        "sha256": "2e0c710b1d36b7597d4bb81e5d28b18ffc65d1a8c51856ce21e3302c044dfcf7"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_20000/000090.png",
+        "bytes": 6930893,
+        "sha256": "5a4430f118fabd7b6ea9318dfc63782542416debeb495f0f89277844b62e7d3a"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_20000/000100.png",
+        "bytes": 7016847,
+        "sha256": "3a037051b2050686bec5368a5891ffb1c5c70f63bbb5a9ad6e13d7974edab465"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_20000/000110.png",
+        "bytes": 6622026,
+        "sha256": "d5551259e26497c1c3133d28fce2ccbca6115fa246495d6deb06d3cc3db68847"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_20000/000120.png",
+        "bytes": 6279270,
+        "sha256": "c91b1d67d702d77069c58a61700c61c3e97e6425a8e9c872f5e40e03f3946305"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_25000/000000.png",
+        "bytes": 6571636,
+        "sha256": "30defe3e38a4ac1516276cf9f1208680d109902dcfc30bc3827895f57549837e"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_25000/000010.png",
+        "bytes": 5984464,
+        "sha256": "8be25f955b0ede75c046575c5869a4ea498b05564fedc7bc692a7efff7001c63"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_25000/000020.png",
+        "bytes": 6115899,
+        "sha256": "1942b55c0fe3b8ad47b1167bc4f890cb324c9d92f579ed86702ac9dbf77cbade"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_25000/000030.png",
+        "bytes": 6318414,
+        "sha256": "b2137b44c28b06b365a5aae3820bb09ca9e2bcc0454ef60f6ed7275ecc84b6cd"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_25000/000040.png",
+        "bytes": 6680211,
+        "sha256": "50a9034b82985071dca71820cd6f1347c4cc5e955feeb1d18fed885d67caeac1"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_25000/000050.png",
+        "bytes": 6922007,
+        "sha256": "42173cec630c1dcf0dd297715d8a9d078a6eae6d31dd300f060459a46df54c30"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_25000/000060.png",
+        "bytes": 6945747,
+        "sha256": "c97fac9c4da100cec39289d635c296ff51fa958fcc903166eb7758981286938f"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_25000/000070.png",
+        "bytes": 6974909,
+        "sha256": "005f8282e572a94ca4ac245dd894c8a3d7f078e5ae4e9f21a87195ae37c36076"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_25000/000080.png",
+        "bytes": 6708160,
+        "sha256": "228f394424fdc29de9d69677b6cb313a5f5e40d699eb1c4ce952d0e2ca9472f3"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_25000/000090.png",
+        "bytes": 6880664,
+        "sha256": "7bf09341bfd3db30ac73d92ce817112f7c7635f8b3f0aa423f30fbed9af42d34"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_25000/000100.png",
+        "bytes": 6952808,
+        "sha256": "8e56fa53c8d501d9ae4bca418254102033f116c777e25160c9a9b4fa9b1adcb8"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_25000/000110.png",
+        "bytes": 6649778,
+        "sha256": "290eebb13fcc120e37babc5487d2f2cc8c9ba85a454eca5dd9e676213c4d41cc"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_25000/000120.png",
+        "bytes": 6358890,
+        "sha256": "140f217df854bd1a5b6c92679d65f4854f06b19d70525f0d935dea61fbf821d7"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_5000/000000.png",
+        "bytes": 5781198,
+        "sha256": "ac6e7c50bed2021d6f0808d66678142ab3bf9ae676998db948d242bd3441a219"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_5000/000010.png",
+        "bytes": 5567212,
+        "sha256": "7c813275c91a3753bfbc43badc54a80457e9c14f313c8058ffce84d05b9d735a"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_5000/000020.png",
+        "bytes": 5666296,
+        "sha256": "2690aa0ca03b21372b69df68233a849a64c8b660d233025ad9c6838f4595a7b0"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_5000/000030.png",
+        "bytes": 5897731,
+        "sha256": "854001b0b949c907b12db7fdfaed03ed341b47c0a455bba61f09856572e0be75"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_5000/000040.png",
+        "bytes": 6189774,
+        "sha256": "5ee576abaf96cf6b552bfdaa77a42704fac79fa1f9b22e35dfb38491ec2abff5"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_5000/000050.png",
+        "bytes": 6467848,
+        "sha256": "15e9453249389d0b06859c9076ddc2b42e25cde117580183702709990f04ac6c"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_5000/000060.png",
+        "bytes": 6563438,
+        "sha256": "0499b309bd44bc5ad54e533233b99519873ebf2bd67e5efbbcaf42a40eaa1bb0"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_5000/000070.png",
+        "bytes": 6582105,
+        "sha256": "56645a9d4e6cfff4bc0d6fb406345f7cf6a8060d3d312d9787169e90bb6dc042"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_5000/000080.png",
+        "bytes": 6389005,
+        "sha256": "c890401613699b3edb73f05f90e531df54a77690f7ab2e97fc8114bd6776e9f0"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_5000/000090.png",
+        "bytes": 6403399,
+        "sha256": "0a1d0225a9590b3d687df958eb06084f845ea3bdd2725948ce121a9227a6489e"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_5000/000100.png",
+        "bytes": 6443067,
+        "sha256": "55fdcc022bd85fcd3dbe7042097c7e7a67165fa7ed19980c733f63c53259fb3c"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_5000/000110.png",
+        "bytes": 5957063,
+        "sha256": "57edc12b63bd6d7009800fbaa0f4bae456e60862dccf5f7003df940990378ffd"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/eval_5000/000120.png",
+        "bytes": 5599387,
+        "sha256": "d62ea4a387a994177de420665346edba7f5127e60551700d3273a41ed034ab49"
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/pier59-4k-high-quality-10000.ply",
+        "bytes": 187173859,
+        "sha256": "3a7c9f63a26c5ec533aed22a63e2ee2dd36e12ce95c5caa0a4d28d260e1e78ee",
+        "splat_count": 793103
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/pier59-4k-high-quality-20000.ply",
+        "bytes": 268465476,
+        "sha256": "911c8f39e5200b9ecec5aee25bb54f3e6cd0e6fc1120c81201fb05eb6762ccb4",
+        "splat_count": 1137559
+      },
+      {
+        "path": "data/training/pier59-brush-4k-high-quality-25k/pier59-4k-high-quality-25000.ply",
+        "bytes": 268465476,
+        "sha256": "23e30f44fdc25866540545d87d20b4b18ff8d3fb8ad490ebfdf2a0e6796d8796",
+        "splat_count": 1137559
+      }
+    ]
+  },
+  "warnings": []
+}

@@ -161,6 +161,55 @@
         "evaluation_report": "reports/pier59-brush-high-quality-evaluation.json",
         "comparison_report": "reports/pier59-brush-quality-comparison.json"
       },
+      "native_4k_derivative": {
+        "selection": {
+          "start_seconds": 136,
+          "duration_seconds": 43,
+          "frame_rate": 3,
+          "frame_count": 129,
+          "dimensions": [3840, 2160],
+          "extraction": "Decoded directly from the original 4K source without the 1080p intermediate."
+        },
+        "local_collection": {
+          "frames_path": "data/processed/pier59-downward-136s-179s-4k-3fps",
+          "frames_total_bytes": 78138963,
+          "aggregate_sha256": "2e9471f40a7193014e4b733950b977f59ea4d7b07fa7b9e0c6f91b059643c78c",
+          "quality_report": "reports/pier59-video-4k-quality.json"
+        },
+        "reconstruction": {
+          "registered_images": 129,
+          "registered_percentage": 100.0,
+          "sparse_points": 75675,
+          "observations": 516517,
+          "mean_track_length": 6.825464155929963,
+          "mean_reprojection_error_pixels": 1.0957347974660876,
+          "total_seconds": 452.555,
+          "report": "reports/pier59-video-4k-sfm.json"
+        },
+        "training": {
+          "trainer": "Brush",
+          "version": "0.3.0",
+          "steps": 25000,
+          "render_resolution": [3840, 2153],
+          "wall_clock_seconds": 3786.128,
+          "peak_memory_footprint_bytes": 10612445360,
+          "swaps": 0,
+          "final_splats": 1137559,
+          "final_ply_bytes": 268465476,
+          "final_ply_sha256": "23e30f44fdc25866540545d87d20b4b18ff8d3fb8ad490ebfdf2a0e6796d8796",
+          "held_out_views": 13,
+          "final_mean_psnr_db": 32.9062,
+          "final_mean_absolute_error": 4.185,
+          "final_global_ssim_proxy": 0.96731,
+          "final_mean_luminance_contrast_ratio": 0.9848,
+          "final_mean_excess_dark_pixel_fraction": 0.0,
+          "artifacts_committed": false,
+          "artifact_policy": "Local-only because the source video license is unspecified.",
+          "training_report": "reports/pier59-brush-4k-high-quality-training.json",
+          "evaluation_report": "reports/pier59-brush-4k-high-quality-evaluation.json",
+          "comparison_report": "reports/pier59-brush-4k-comparison.json"
+        }
+      },
       "acquisition_history": {
         "metadata_probe": "successful",
         "representative_frames_inspected": 3,

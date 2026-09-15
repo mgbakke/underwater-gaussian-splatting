@@ -1,0 +1,26 @@
+{
+  "acquisition_date": "2026-09-14",
+  "video": {
+    "id": "pier59-downward-mock-transect-4k",
+    "name": "pier59-downward-mock-transect",
+    "source_page": "https://drive.google.com/file/d/1aWDrqq5DItRglgswjGO79yGcdP1AyOBX/view",
+    "download_url": "https://drive.usercontent.google.com/download?id=1aWDrqq5DItRglgswjGO79yGcdP1AyOBX&export=download&confirm=t",
+    "source_sha256": "77dc9775659edde233ca4ef55c6b2687e57c958aed8c7c35130ee69a76725103",
+    "extract_from_source": true,
+    "start_seconds": 136,
+    "duration_seconds": 43,
+    "output_width": 3840,
+    "frame_rate": 3,
+    "jpeg_quality": 2,
+    "clip_path": "data/raw/video/pier59-downward-136s-179s-4k.mp4",
+    "frames_destination": "data/processed/pier59-downward-136s-179s-4k-3fps",
+    "pilot_id": "pier59-video-4k-pilot",
+    "quality_report_name": "pier59-video-4k"
+  },
+  "colmap": {
+    "destination": "data/colmap"
+  },
+  "reports": {
+    "directory": "reports"
+  }
+}

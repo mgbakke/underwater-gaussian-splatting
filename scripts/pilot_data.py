@@ -102,6 +102,13 @@ def download_images(config: dict[str, Any]) -> None:
 def executable(name: str) -> str:
     override = os.environ.get(name.upper())
     candidate = override or shutil.which(name)
+    if not candidate and name == "ffmpeg":
+        try:
+            import imageio_ffmpeg
+
+            candidate = imageio_ffmpeg.get_ffmpeg_exe()
+        except ImportError:
+            pass
     if not candidate:
         raise RuntimeError(
             f"{name} is required. Install ffmpeg or set {name.upper()}=/path/to/{name}."
@@ -263,31 +270,57 @@ def trim_video(config: dict[str, Any]) -> None:
 
 def extract_video_frames(config: dict[str, Any]) -> None:
     video = config["video"]
-    source = root_path(video["clip_path"])
+    direct_source = video.get("extract_from_source", False)
+    source_override = os.environ.get("VIDEO_SOURCE") if direct_source else None
+    source = (
+        Path(source_override).expanduser().resolve()
+        if source_override
+        else root_path(video["clip_path"])
+    )
     if not source.exists():
+        if direct_source:
+            raise FileNotFoundError(
+                "Set VIDEO_SOURCE to the original video when extract_from_source is true."
+            )
         raise FileNotFoundError(f"Missing clip: {source}")
+    expected_sha256 = video.get("source_sha256") if direct_source else None
+    if expected_sha256:
+        actual_sha256 = sha256_file(source)
+        if actual_sha256 != expected_sha256:
+            raise RuntimeError(
+                f"Source checksum mismatch: expected {expected_sha256}, got {actual_sha256}"
+            )
     destination = root_path(video["frames_destination"])
     destination.mkdir(parents=True, exist_ok=True)
     for old_frame in destination.glob("frame-*.jpg"):
         old_frame.unlink()
-    run(
+    command = [
+        executable("ffmpeg"),
+        "-hide_banner",
+        "-loglevel",
+        "warning",
+    ]
+    if direct_source:
+        command.extend(["-ss", str(video["start_seconds"])])
+    command.extend(["-i", str(source)])
+    if direct_source:
+        command.extend(["-t", str(video["duration_seconds"])])
+    filters = [f"fps={video['frame_rate']}"]
+    if video.get("output_width"):
+        filters.append(f"scale={video['output_width']}:-2")
+    command.extend(
         [
-            executable("ffmpeg"),
-            "-hide_banner",
-            "-loglevel",
-            "warning",
-            "-i",
-            str(source),
             "-vf",
-            f"fps={video['frame_rate']}",
+            ",".join(filters),
             "-q:v",
-            "2",
+            str(video.get("jpeg_quality", 2)),
             "-start_number",
             "0",
             "-y",
             str(destination / "frame-%06d.jpg"),
         ]
     )
+    run(command)
 
 
 def image_paths(directory: Path) -> list[Path]:
@@ -423,7 +456,7 @@ def quality_report(config: dict[str, Any], target: str) -> None:
         video = config["video"]
         write_report(
             config,
-            "video",
+            video.get("quality_report_name", "video"),
             root_path(video["frames_destination"]),
             1.0 / float(video["frame_rate"]),
         )
@@ -457,7 +490,7 @@ def prepare_colmap(config: dict[str, Any], target: str) -> None:
         )
     if target in {"video", "all"}:
         prepare_one_colmap(
-            "pier59-video-pilot",
+            config["video"].get("pilot_id", "pier59-video-pilot"),
             root_path(config["video"]["frames_destination"]),
             destination,
         )

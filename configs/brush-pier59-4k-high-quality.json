@@ -1,0 +1,21 @@
+{
+  "name": "pier59-brush-4k-high-quality-25k",
+  "input": "data/sfm/pier59-video-4k-pilot/undistorted",
+  "output": "data/training/pier59-brush-4k-high-quality-25k",
+  "report": "reports/pier59-brush-4k-high-quality-training.json",
+  "brush_version": "0.3.0",
+  "brush_archive_sha256": "65b2631398c839be3c1d4d7160fe2326389dec87830aac0710985e6690a1048c",
+  "total_steps": 25000,
+  "max_resolution": 3840,
+  "max_frames": 129,
+  "max_splats": 3000000,
+  "growth_stop_iter": 18000,
+  "refine_every": 150,
+  "growth_select_fraction": 0.12,
+  "opac_loss_weight": 3e-09,
+  "scale_loss_weight": 3e-08,
+  "eval_split_every": 10,
+  "eval_every": 5000,
+  "export_every": 10000,
+  "export_name": "pier59-4k-high-quality-{iter}.ply"
+}
