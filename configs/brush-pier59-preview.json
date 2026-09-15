@@ -1,0 +1,17 @@
+{
+  "name": "pier59-brush-preview-10k",
+  "input": "data/sfm/pier59-video-pilot/undistorted",
+  "output": "data/training/pier59-brush-preview-10k",
+  "report": "reports/pier59-brush-training.json",
+  "brush_version": "0.3.0",
+  "brush_archive_sha256": "65b2631398c839be3c1d4d7160fe2326389dec87830aac0710985e6690a1048c",
+  "total_steps": 10000,
+  "max_resolution": 1536,
+  "max_frames": 86,
+  "max_splats": 2000000,
+  "growth_stop_iter": 7000,
+  "eval_split_every": 10,
+  "eval_every": 1000,
+  "export_every": 2500,
+  "export_name": "pier59_{iter}.ply"
+}

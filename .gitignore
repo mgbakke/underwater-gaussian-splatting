@@ -9,6 +9,7 @@ data/raw/**
 data/processed/**
 data/colmap/**
 data/sfm/**
+data/training/**
 data/contact-sheets/**
 
 # Preserve the directory layout.
@@ -16,3 +17,4 @@ data/contact-sheets/**
 !data/processed/.gitkeep
 !data/colmap/.gitkeep
 !data/sfm/.gitkeep
+!data/training/.gitkeep

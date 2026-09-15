@@ -2,17 +2,26 @@
 
 ## Current boundary
 
-This repository stops at validated image directories suitable for camera registration:
+This repository now validates the complete bounded pilot path through sparse
+registration and a first static Gaussian-splat model:
 
 ```text
 selected source frames
   -> quality report and duplicate checks
   -> data/colmap/<pilot>/images
-  -> COLMAP or GLOMAP camera registration
-  -> static Gaussian splatting training
+  -> COLMAP camera registration and PINHOLE undistortion
+  -> bounded Brush/Metal static Gaussian splatting training
+  -> held-out registered-view evaluation
 ```
 
-Run COLMAP/GLOMAP outside this repository once the image pilot is accepted. A typical next pass is feature extraction, sequential or exhaustive matching, mapping, and image undistortion. For underwater footage, inspect registration coverage, reprojection error, and camera trajectory before training; color cast, particles, caustics, moving organisms, and low inter-frame overlap can all produce plausible-looking but incorrect poses.
+`scripts/run_sfm.py` performs feature extraction, sequential matching,
+incremental mapping, and image undistortion through the official `pycolmap`
+wheel. `scripts/run_brush.py` consumes the resulting COLMAP project, while
+`scripts/evaluate_brush.py` measures its held-out registered-camera renders.
+For underwater footage, inspect registration coverage, reprojection error, and
+camera trajectory before training; color cast, particles, caustics, moving
+organisms, and low inter-frame overlap can all produce plausible-looking but
+incorrect poses.
 
 The feasibility run now produces training-ready, undistorted `PINHOLE` projects under:
 
@@ -20,6 +29,13 @@ The feasibility run now produces training-ready, undistorted `PINHOLE` projects 
 - `data/sfm/pier59-video-pilot/undistorted`
 
 Both media-derived directories remain gitignored. Metrics are committed in `reports/*-sfm.json`.
+
+The refined Pier 59 project also has a completed 10,000-step Brush v0.3.0
+reference run: 330,908 final splats, 228.660 seconds wall time, and 32.0507 dB
+mean PSNR on nine held-out registered views. Training outputs remain ignored
+under `data/training/pier59-brush-preview-10k`; committed measurements are in
+`reports/pier59-brush-training.json` and
+`reports/pier59-brush-evaluation.json`.
 
 ## Aquarium-specific evaluation order
 
@@ -41,7 +57,7 @@ The following projects are **optional references, not installed or executed by t
 
 The local reference machine is a MacBook Pro with an M4 Max, 40-core GPU, Metal 4, and 64 GB unified memory. Preprocessing in this repository is Mac-native and does not assume CUDA.
 
-- [Splat Local](https://github.com/michael-L-i/splat-local) combines COLMAP/GLOMAP poses with Metal-native [Brush](https://github.com/ArthurBrussee/brush) training and is the first local end-to-end experiment to evaluate.
+- [Splat Local](https://github.com/michael-L-i/splat-local) combines COLMAP/GLOMAP poses with Metal-native [Brush](https://github.com/ArthurBrussee/brush) training and is the preferred next orchestration and interactive-viewer layer.
 - [MetalSplat](https://github.com/tchauffi/metalsplat) is an MIT-licensed PyTorch/Metal experiment worth benchmarking on the M4 Max.
 - [LichtFeld Studio](https://github.com/MrNeRF/LichtFeld-Studio) is a GPL-3.0 desktop training/inspection option, but its CUDA-oriented platform support and integration license must be checked before adoption.
 

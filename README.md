@@ -59,7 +59,23 @@ VIDEO_SOURCE="$HOME/Downloads/2022_6_23_downward.mp4" \
 
 All commands default to [configs/pilot.json](configs/pilot.json). Run `python scripts/pilot_data.py --help` for overrides. Google Drive automation encountered its public “too many users” quota, but the local-source path completed after a browser download. The script deletes partial source files on failure.
 
-See [docs/reconstruction-feasibility.md](docs/reconstruction-feasibility.md) for measured registration results and the verified Brush/Metal smoke-test command.
+See [docs/reconstruction-feasibility.md](docs/reconstruction-feasibility.md)
+for measured registration and Brush/Metal training results.
+
+Run the bounded Brush v0.3.0 Metal training and held-out evaluation after the
+Pier 59 COLMAP project exists:
+
+```bash
+BRUSH=/path/to/brush_app python scripts/run_brush.py --clean
+python scripts/evaluate_brush.py
+```
+
+The completed reference run consumed the 86-camera project, held out every
+tenth image, and trained for 10,000 steps in 228.660 seconds, producing 330,908
+splats and a final held-out mean PSNR of 32.0507 dB. The PLY and renders remain
+under ignored `data/training/`; concise metadata is committed in
+`reports/pier59-brush-training.json` and
+`reports/pier59-brush-evaluation.json`.
 
 ## Data policy
 

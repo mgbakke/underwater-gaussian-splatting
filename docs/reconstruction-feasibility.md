@@ -74,20 +74,110 @@ The video path is especially coherent: endpoint displacement is 95.8% of path le
 
 ## Metal-native training gate
 
-No long training run was started. The latest published Brush v0.3.0 Apple ARM archive was downloaded to a temporary directory and verified against its upstream SHA-256:
+The latest published Brush v0.3.0 Apple ARM archive was downloaded to a
+temporary directory and verified against its upstream SHA-256:
 
 ```text
 65b2631398c839be3c1d4d7160fe2326389dec87830aac0710985e6690a1048c
 ```
 
-Two 10-step, 512-pixel smoke tests successfully loaded the generated COLMAP projects, optimized, and exported PLY files:
+Two 10-step, 512-pixel smoke tests first confirmed that Brush could load both
+generated COLMAP projects, optimize, and export PLY files:
 
 | Input | Wall time | Smoke artifact |
 |---|---:|---:|
 | 59 stills | 2.52 s | 7,244,390 bytes |
 | 86 video frames | 1.46 s | 12,124,634 bytes |
 
-Temporary binaries and PLYs were not committed. A practical first preview run on the preferred video sequence is:
+The first bounded real training run then used the refined Pier 59 sequence. It
+held out every tenth registered image, trained for 10,000 steps at a maximum
+dimension of 1536 pixels, stopped densification at step 7,000, and capped the
+model at two million splats. The undistorted inputs are 1927 x 1080; Brush's
+training/evaluation resolution was 1536 x 861.
+
+```bash
+# After downloading and verifying Brush as shown below:
+BRUSH=/tmp/brush-app-aarch64-apple-darwin/brush_app \
+  python scripts/run_brush.py --clean
+python scripts/evaluate_brush.py
+```
+
+The runner expands to:
+
+```bash
+/tmp/brush-app-aarch64-apple-darwin/brush_app \
+  --total-steps 10000 \
+  --max-resolution 1536 \
+  --max-frames 86 \
+  --max-splats 2000000 \
+  --growth-stop-iter 7000 \
+  --eval-split-every 10 \
+  --eval-every 1000 \
+  --eval-save-to-disk \
+  --export-every 2500 \
+  --export-path data/training/pier59-brush-preview-10k \
+  --export-name 'pier59_{iter}.ply' \
+  data/sfm/pier59-video-pilot/undistorted
+```
+
+| Training metric | Result |
+|---|---:|
+| Registered input frames | 86 / 86 |
+| Optimization steps | 10,000 |
+| Wall-clock time | 228.660 s |
+| Maximum resident set size | 1,193,050,112 bytes |
+| Peak memory footprint | 2,888,402,816 bytes |
+| Page faults / swaps | 527 / 0 |
+| Final splats | 330,908 |
+| Total local training output | 354,114,798 bytes (96 files) |
+| Brush warnings in log | None |
+
+| Checkpoint | Splats | Bytes | SHA-256 |
+|---|---:|---:|---|
+| 2,500 | 118,559 | 27,981,475 | `f208bd64a5fd3256eea8b17ef5b572c33f3980a0e61292b432d5fefbadcb7311` |
+| 5,000 | 229,336 | 54,124,847 | `5a5e904fd03137da352ca66f22976f5725499985613eb10726741d2b7f919b45` |
+| 7,500 | 330,908 | 78,095,839 | `61458080501cb3eed7f81b200b65879a295e7dc83b100d8d56c2dfb0b4264879` |
+| 10,000 | 330,908 | 78,095,839 | `99a7dd677623e8ff0ff647ce52e579c1c1240af2d4c6fe758f6c8e6048a0599e` |
+
+Brush saved nine held-out registered-camera renders every 1,000 steps. Brush
+v0.3.0 did not print numeric metrics, so `scripts/evaluate_brush.py` compares
+those renders with Lanczos-resized ground truth:
+
+| Step | Mean PSNR | Mean absolute error | Global SSIM proxy |
+|---|---:|---:|---:|
+| 1,000 | 28.6245 dB | 7.0075 | 0.904721 |
+| 5,000 | 31.1966 dB | 5.3443 | 0.952169 |
+| 10,000 | 32.0507 dB | 4.6879 | 0.959408 |
+
+The final held-out PSNR ranged from 26.4957 dB (`000070.png`) to 35.0168 dB
+(`000010.png`). The reported `global_ssim` is a lightweight global,
+per-channel proxy rather than standard windowed SSIM.
+
+Representative and worst-case held-out views show coherent seafloor geometry
+and stable shell/rock structure. There is no scene-boundary jump and no
+catastrophic floater field from the tested cameras. Remaining defects are
+softening and edge smearing in low-texture regions, occasional dark/soft
+peripheral regions, and modest green/yellow color drift. This is sufficient
+evidence for a reconstruction/training proof of feasibility, not a
+publication-quality model.
+
+Brush v0.3.0's CLI does not expose a noninteractive arbitrary-camera render
+command, so this run did not fabricate a separate novel camera path. It
+exported the final PLY for interactive novel-view inspection and used genuinely
+held-out registered views for quantitative evaluation. Local-only artifacts:
+
+- `data/training/pier59-brush-preview-10k/pier59_10000.ply`
+- `data/training/pier59-brush-preview-10k/eval_10000/`
+- `data/training/pier59-brush-preview-10k/training.log`
+- `data/training/pier59-brush-preview-10k/resource-usage.txt`
+
+These files remain ignored because the source video's redistribution license is
+unspecified. No source frames, evaluation renders, or trained PLYs are
+committed. Exact metadata and per-view results are in
+`reports/pier59-brush-training.json` and
+`reports/pier59-brush-evaluation.json`.
+
+To reproduce the external Brush installation:
 
 ```bash
 # Download and verify the upstream Apple ARM release outside the repository.
@@ -98,28 +188,10 @@ printf '%s  %s\n' \
   65b2631398c839be3c1d4d7160fe2326389dec87830aac0710985e6690a1048c \
   /tmp/brush-app.tar.xz | shasum -a 256 -c -
 tar -xJf /tmp/brush-app.tar.xz -C /tmp
-
-/tmp/brush-app-aarch64-apple-darwin/brush_app \
-  --total-steps 10000 \
-  --max-resolution 1536 \
-  --eval-split-every 10 \
-  --eval-every 1000 \
-  --export-every 5000 \
-  --export-path /path/out \
-  data/sfm/pier59-video-pilot/undistorted
 ```
 
-Equivalent command after installing `brush_app` on `PATH`:
-
-```bash
-brush_app \
-  --total-steps 10000 \
-  --max-resolution 1536 \
-  --eval-split-every 10 \
-  --eval-every 1000 \
-  --export-every 5000 \
-  --export-path /path/out \
-  data/sfm/pier59-video-pilot/undistorted
-```
-
-That command is documented, not executed. Review held-out views and trajectory-aligned artifacts before increasing to Splat Local's 18k/2048 “High” profile. Moving fauna, lighting changes, and suspended particles should be masked or treated as outliers if they produce floaters.
+The bounded direct-Brush path is the practical M4 baseline. Splat Local remains
+the preferred next orchestration/viewer layer, but increasing to its 18k/2048
+"High" profile should wait until the final PLY has been interactively inspected
+from off-trajectory viewpoints. Moving fauna, lighting changes, and suspended
+particles should be masked or treated as outliers if they produce floaters.
