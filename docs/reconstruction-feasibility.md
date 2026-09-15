@@ -195,3 +195,55 @@ the preferred next orchestration/viewer layer, but increasing to its 18k/2048
 "High" profile should wait until the final PLY has been interactively inspected
 from off-trajectory viewpoints. Moving fauna, lighting changes, and suspended
 particles should be masked or treated as outliers if they produce floaters.
+
+## High-quality and haze-reduction follow-up
+
+Interactive inspection of the baseline showed that reducing the viewer's
+Splat Scale did not remove the soft, fog-like appearance at close range. Two
+matched 7,000-step, full-resolution previews therefore compared detail-first
+training with moderate opacity/scale regularization. The regularized preview
+slightly improved PSNR, SSIM, and contrast while retaining a zero conservative
+dark-hole fraction, so it was promoted to the final 18,000-step run.
+
+```bash
+BRUSH=/tmp/brush-app-aarch64-apple-darwin/brush_app \
+  python scripts/run_brush.py \
+    --config configs/brush-pier59-high-quality.json \
+    --clean
+
+python scripts/evaluate_brush.py \
+  --training-dir data/training/pier59-brush-high-quality-18k \
+  --report reports/pier59-brush-high-quality-evaluation.json
+```
+
+The selected preset uses the full 1920-pixel input width, a 1.5M-splat cap,
+18,000 steps, refinement every 100 steps, densification through step 12,000,
+a 0.15 growth-selection fraction, `3e-9` opacity loss, and `3e-8` scale loss.
+
+| Metric | Baseline 10k | Selected 18k |
+|---|---:|---:|
+| Render resolution | 1536 x 861 | 1920 x 1076 |
+| Final splats | 330,908 | 1,500,000 |
+| Wall-clock time | 228.660 s | 995.617 s |
+| Peak memory footprint | 2,888,402,816 bytes | 6,181,112,712 bytes |
+| Mean PSNR | 32.0507 dB | 32.2906 dB |
+| Mean absolute error | 4.6879 | 4.6544 |
+| Global SSIM proxy | 0.959408 | 0.963730 |
+| Mean sharpness ratio | 0.3429 | 0.4642 |
+| Mean luminance contrast ratio | 0.9752 | 0.9831 |
+| Excess dark-pixel fraction | 0 | 0 |
+
+The sharpness proxy improved by 35.37% relative to the baseline. Representative
+held-out views show visibly crisper shell and rock boundaries, better local
+contrast, and complete coverage without visible black holes. Moderate haze
+remains where it is present in the source imagery, and extreme close-ups or
+off-trajectory views still expose the limits of the 1920 x 1080 source video.
+
+The final local PLY is:
+
+`data/training/pier59-brush-high-quality-18k/pier59-high-quality-18000.ply`
+
+It contains 1,500,000 splats, is 354,001,552 bytes, and has SHA-256
+`0661d3a8319a795b2b5a5d1eadc4b4d83bf5e9a96091743e307e926c12b0defe`.
+All preview/final PLYs, evaluation renders, and local comparison sheets remain
+ignored because the source video's redistribution license is unspecified.

@@ -30,12 +30,12 @@ The feasibility run now produces training-ready, undistorted `PINHOLE` projects 
 
 Both media-derived directories remain gitignored. Metrics are committed in `reports/*-sfm.json`.
 
-The refined Pier 59 project also has a completed 10,000-step Brush v0.3.0
-reference run: 330,908 final splats, 228.660 seconds wall time, and 32.0507 dB
-mean PSNR on nine held-out registered views. Training outputs remain ignored
-under `data/training/pier59-brush-preview-10k`; committed measurements are in
-`reports/pier59-brush-training.json` and
-`reports/pier59-brush-evaluation.json`.
+The refined Pier 59 project has both a 10,000-step baseline and a selected
+18,000-step high-quality Brush v0.3.0 run. The latter reached the 1.5M-splat
+cap in 995.617 seconds and improved the held-out sharpness ratio by 35.37%
+without measurable dark-hole growth. Training outputs remain ignored under
+`data/training/`; committed measurements and the tuning comparison are in
+`reports/pier59-brush-*.json`.
 
 ## Aquarium-specific evaluation order
 

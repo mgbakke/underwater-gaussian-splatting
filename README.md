@@ -70,12 +70,14 @@ BRUSH=/path/to/brush_app python scripts/run_brush.py --clean
 python scripts/evaluate_brush.py
 ```
 
-The completed reference run consumed the 86-camera project, held out every
-tenth image, and trained for 10,000 steps in 228.660 seconds, producing 330,908
-splats and a final held-out mean PSNR of 32.0507 dB. The PLY and renders remain
-under ignored `data/training/`; concise metadata is committed in
-`reports/pier59-brush-training.json` and
-`reports/pier59-brush-evaluation.json`.
+The selected high-quality run consumed the 86-camera project, held out every
+tenth image, and trained for 18,000 steps at 1920 px in 995.617 seconds. It
+produced 1,500,000 splats, 32.2906 dB held-out mean PSNR, and 35.37% higher
+sharpness than the initial 10k baseline without measurable dark-hole growth.
+The PLY and renders remain under ignored `data/training/`; concise metadata is
+committed in `reports/pier59-brush-high-quality-training.json`,
+`reports/pier59-brush-high-quality-evaluation.json`, and
+`reports/pier59-brush-quality-comparison.json`.
 
 ## Data policy
 

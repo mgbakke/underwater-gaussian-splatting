@@ -1,11 +1,14 @@
 {
-  "generated_at": "2026-09-14T18:33:46-07:00",
+  "generated_at": "2026-09-14T18:58:54-07:00",
   "training_directory": "data/training/pier59-brush-preview-10k",
   "ground_truth_directory": "data/sfm/pier59-video-pilot/undistorted/images",
   "metrics": {
     "psnr": "RGB PSNR after Lanczos-resizing ground truth to render dimensions.",
     "mean_absolute_error": "Mean absolute RGB error on the 0-255 scale.",
-    "global_ssim": "Global per-channel SSIM averaged over RGB; a lightweight proxy, not windowed SSIM."
+    "global_ssim": "Global per-channel SSIM averaged over RGB; a lightweight proxy, not windowed SSIM.",
+    "sharpness_ratio": "Rendered/reference luminance Laplacian variance. Values below 1 indicate softer output.",
+    "luminance_contrast_ratio": "Rendered/reference luminance standard deviation. Values below 1 indicate reduced contrast.",
+    "excess_dark_pixel_fraction": "Fraction of pixels below luminance 10 where ground truth exceeds 30; a conservative hole indicator."
   },
   "stages": [
     {
@@ -15,6 +18,9 @@
       "median_psnr_db": 28.5536,
       "mean_absolute_error_0_255": 7.0075,
       "mean_global_ssim": 0.904721,
+      "mean_sharpness_ratio": 0.1335,
+      "mean_luminance_contrast_ratio": 0.9156,
+      "mean_excess_dark_pixel_fraction": 0.0,
       "images": [
         {
           "image": "000000.png",
@@ -22,7 +28,10 @@
           "height": 861,
           "psnr_db": 29.9039,
           "mean_absolute_error_0_255": 5.6045,
-          "global_ssim": 0.852137
+          "global_ssim": 0.852137,
+          "sharpness_ratio": 0.0631,
+          "luminance_contrast_ratio": 0.8312,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000010.png",
@@ -30,7 +39,10 @@
           "height": 861,
           "psnr_db": 32.2063,
           "mean_absolute_error_0_255": 4.2629,
-          "global_ssim": 0.915627
+          "global_ssim": 0.915627,
+          "sharpness_ratio": 0.181,
+          "luminance_contrast_ratio": 0.9494,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000020.png",
@@ -38,7 +50,10 @@
           "height": 861,
           "psnr_db": 29.3095,
           "mean_absolute_error_0_255": 5.6039,
-          "global_ssim": 0.905972
+          "global_ssim": 0.905972,
+          "sharpness_ratio": 0.1596,
+          "luminance_contrast_ratio": 0.8976,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000030.png",
@@ -46,7 +61,10 @@
           "height": 861,
           "psnr_db": 28.9863,
           "mean_absolute_error_0_255": 6.2196,
-          "global_ssim": 0.929022
+          "global_ssim": 0.929022,
+          "sharpness_ratio": 0.1476,
+          "luminance_contrast_ratio": 0.957,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000040.png",
@@ -54,7 +72,10 @@
           "height": 861,
           "psnr_db": 28.0284,
           "mean_absolute_error_0_255": 7.457,
-          "global_ssim": 0.935687
+          "global_ssim": 0.935687,
+          "sharpness_ratio": 0.1628,
+          "luminance_contrast_ratio": 0.9532,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000050.png",
@@ -62,7 +83,10 @@
           "height": 861,
           "psnr_db": 28.1479,
           "mean_absolute_error_0_255": 7.1773,
-          "global_ssim": 0.936954
+          "global_ssim": 0.936954,
+          "sharpness_ratio": 0.1622,
+          "luminance_contrast_ratio": 0.9315,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000060.png",
@@ -70,7 +94,10 @@
           "height": 861,
           "psnr_db": 28.5536,
           "mean_absolute_error_0_255": 6.7734,
-          "global_ssim": 0.925925
+          "global_ssim": 0.925925,
+          "sharpness_ratio": 0.1504,
+          "luminance_contrast_ratio": 0.9343,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000070.png",
@@ -78,7 +105,10 @@
           "height": 861,
           "psnr_db": 23.9859,
           "mean_absolute_error_0_255": 13.4214,
-          "global_ssim": 0.847122
+          "global_ssim": 0.847122,
+          "sharpness_ratio": 0.1179,
+          "luminance_contrast_ratio": 0.9276,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000080.png",
@@ -86,7 +116,10 @@
           "height": 861,
           "psnr_db": 28.4988,
           "mean_absolute_error_0_255": 6.5476,
-          "global_ssim": 0.894041
+          "global_ssim": 0.894041,
+          "sharpness_ratio": 0.0567,
+          "luminance_contrast_ratio": 0.859,
+          "excess_dark_pixel_fraction": 0.0
         }
       ]
     },
@@ -97,6 +130,9 @@
       "median_psnr_db": 29.4279,
       "mean_absolute_error_0_255": 5.8774,
       "mean_global_ssim": 0.928623,
+      "mean_sharpness_ratio": 0.1942,
+      "mean_luminance_contrast_ratio": 0.9379,
+      "mean_excess_dark_pixel_fraction": 0.0,
       "images": [
         {
           "image": "000000.png",
@@ -104,7 +140,10 @@
           "height": 861,
           "psnr_db": 31.471,
           "mean_absolute_error_0_255": 4.6937,
-          "global_ssim": 0.902489
+          "global_ssim": 0.902489,
+          "sharpness_ratio": 0.105,
+          "luminance_contrast_ratio": 0.8813,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000010.png",
@@ -112,7 +151,10 @@
           "height": 861,
           "psnr_db": 32.9718,
           "mean_absolute_error_0_255": 3.7014,
-          "global_ssim": 0.928971
+          "global_ssim": 0.928971,
+          "sharpness_ratio": 0.231,
+          "luminance_contrast_ratio": 0.9549,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000020.png",
@@ -120,7 +162,10 @@
           "height": 861,
           "psnr_db": 31.4874,
           "mean_absolute_error_0_255": 4.4654,
-          "global_ssim": 0.945204
+          "global_ssim": 0.945204,
+          "sharpness_ratio": 0.2375,
+          "luminance_contrast_ratio": 0.9361,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000030.png",
@@ -128,7 +173,10 @@
           "height": 861,
           "psnr_db": 29.6007,
           "mean_absolute_error_0_255": 5.6694,
-          "global_ssim": 0.942382
+          "global_ssim": 0.942382,
+          "sharpness_ratio": 0.1994,
+          "luminance_contrast_ratio": 0.9636,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000040.png",
@@ -136,7 +184,10 @@
           "height": 861,
           "psnr_db": 29.4279,
           "mean_absolute_error_0_255": 6.2389,
-          "global_ssim": 0.954849
+          "global_ssim": 0.954849,
+          "sharpness_ratio": 0.2393,
+          "luminance_contrast_ratio": 0.9789,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000050.png",
@@ -144,7 +195,10 @@
           "height": 861,
           "psnr_db": 29.3287,
           "mean_absolute_error_0_255": 6.3891,
-          "global_ssim": 0.953756
+          "global_ssim": 0.953756,
+          "sharpness_ratio": 0.2185,
+          "luminance_contrast_ratio": 0.9455,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000060.png",
@@ -152,7 +206,10 @@
           "height": 861,
           "psnr_db": 29.0467,
           "mean_absolute_error_0_255": 6.4751,
-          "global_ssim": 0.938182
+          "global_ssim": 0.938182,
+          "sharpness_ratio": 0.2124,
+          "luminance_contrast_ratio": 0.9435,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000070.png",
@@ -160,7 +217,10 @@
           "height": 861,
           "psnr_db": 28.126,
           "mean_absolute_error_0_255": 7.5011,
-          "global_ssim": 0.915618
+          "global_ssim": 0.915618,
+          "sharpness_ratio": 0.1778,
+          "luminance_contrast_ratio": 0.9356,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000080.png",
@@ -168,7 +228,10 @@
           "height": 861,
           "psnr_db": 27.5096,
           "mean_absolute_error_0_255": 7.7627,
-          "global_ssim": 0.876156
+          "global_ssim": 0.876156,
+          "sharpness_ratio": 0.1273,
+          "luminance_contrast_ratio": 0.9013,
+          "excess_dark_pixel_fraction": 0.0
         }
       ]
     },
@@ -179,6 +242,9 @@
       "median_psnr_db": 30.6066,
       "mean_absolute_error_0_255": 6.0742,
       "mean_global_ssim": 0.93702,
+      "mean_sharpness_ratio": 0.2273,
+      "mean_luminance_contrast_ratio": 0.9513,
+      "mean_excess_dark_pixel_fraction": 0.0,
       "images": [
         {
           "image": "000000.png",
@@ -186,7 +252,10 @@
           "height": 861,
           "psnr_db": 31.4521,
           "mean_absolute_error_0_255": 4.7387,
-          "global_ssim": 0.90161
+          "global_ssim": 0.90161,
+          "sharpness_ratio": 0.1296,
+          "luminance_contrast_ratio": 0.8896,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000010.png",
@@ -194,7 +263,10 @@
           "height": 861,
           "psnr_db": 33.743,
           "mean_absolute_error_0_255": 3.4359,
-          "global_ssim": 0.941562
+          "global_ssim": 0.941562,
+          "sharpness_ratio": 0.2543,
+          "luminance_contrast_ratio": 0.9729,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000020.png",
@@ -202,7 +274,10 @@
           "height": 861,
           "psnr_db": 31.9323,
           "mean_absolute_error_0_255": 4.2248,
-          "global_ssim": 0.950255
+          "global_ssim": 0.950255,
+          "sharpness_ratio": 0.2533,
+          "luminance_contrast_ratio": 0.943,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000030.png",
@@ -210,7 +285,10 @@
           "height": 861,
           "psnr_db": 30.6066,
           "mean_absolute_error_0_255": 5.0416,
-          "global_ssim": 0.953436
+          "global_ssim": 0.953436,
+          "sharpness_ratio": 0.2215,
+          "luminance_contrast_ratio": 0.9653,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000040.png",
@@ -218,7 +296,10 @@
           "height": 861,
           "psnr_db": 30.6335,
           "mean_absolute_error_0_255": 5.3675,
-          "global_ssim": 0.964733
+          "global_ssim": 0.964733,
+          "sharpness_ratio": 0.2757,
+          "luminance_contrast_ratio": 0.9891,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000050.png",
@@ -226,7 +307,10 @@
           "height": 861,
           "psnr_db": 27.6233,
           "mean_absolute_error_0_255": 8.1075,
-          "global_ssim": 0.947767
+          "global_ssim": 0.947767,
+          "sharpness_ratio": 0.2525,
+          "luminance_contrast_ratio": 0.9762,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000060.png",
@@ -234,7 +318,10 @@
           "height": 861,
           "psnr_db": 29.8996,
           "mean_absolute_error_0_255": 5.9882,
-          "global_ssim": 0.955605
+          "global_ssim": 0.955605,
+          "sharpness_ratio": 0.2611,
+          "luminance_contrast_ratio": 0.9733,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000070.png",
@@ -242,7 +329,10 @@
           "height": 861,
           "psnr_db": 26.3836,
           "mean_absolute_error_0_255": 10.0325,
-          "global_ssim": 0.925843
+          "global_ssim": 0.925843,
+          "sharpness_ratio": 0.2336,
+          "luminance_contrast_ratio": 0.9615,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000080.png",
@@ -250,7 +340,10 @@
           "height": 861,
           "psnr_db": 27.6285,
           "mean_absolute_error_0_255": 7.7308,
-          "global_ssim": 0.892365
+          "global_ssim": 0.892365,
+          "sharpness_ratio": 0.1637,
+          "luminance_contrast_ratio": 0.8912,
+          "excess_dark_pixel_fraction": 0.0
         }
       ]
     },
@@ -261,6 +354,9 @@
       "median_psnr_db": 31.1749,
       "mean_absolute_error_0_255": 5.3102,
       "mean_global_ssim": 0.947923,
+      "mean_sharpness_ratio": 0.2678,
+      "mean_luminance_contrast_ratio": 0.9579,
+      "mean_excess_dark_pixel_fraction": 0.0,
       "images": [
         {
           "image": "000000.png",
@@ -268,7 +364,10 @@
           "height": 861,
           "psnr_db": 32.2768,
           "mean_absolute_error_0_255": 4.2622,
-          "global_ssim": 0.91911
+          "global_ssim": 0.91911,
+          "sharpness_ratio": 0.1511,
+          "luminance_contrast_ratio": 0.9084,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000010.png",
@@ -276,7 +375,10 @@
           "height": 861,
           "psnr_db": 34.3242,
           "mean_absolute_error_0_255": 3.2061,
-          "global_ssim": 0.94869
+          "global_ssim": 0.94869,
+          "sharpness_ratio": 0.2791,
+          "luminance_contrast_ratio": 0.9677,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000020.png",
@@ -284,7 +386,10 @@
           "height": 861,
           "psnr_db": 33.2305,
           "mean_absolute_error_0_255": 3.66,
-          "global_ssim": 0.963688
+          "global_ssim": 0.963688,
+          "sharpness_ratio": 0.3058,
+          "luminance_contrast_ratio": 0.9481,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000030.png",
@@ -292,7 +397,10 @@
           "height": 861,
           "psnr_db": 31.8849,
           "mean_absolute_error_0_255": 4.2017,
-          "global_ssim": 0.964666
+          "global_ssim": 0.964666,
+          "sharpness_ratio": 0.2643,
+          "luminance_contrast_ratio": 0.9732,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000040.png",
@@ -300,7 +408,10 @@
           "height": 861,
           "psnr_db": 31.1749,
           "mean_absolute_error_0_255": 4.959,
-          "global_ssim": 0.965682
+          "global_ssim": 0.965682,
+          "sharpness_ratio": 0.3233,
+          "luminance_contrast_ratio": 0.9807,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000050.png",
@@ -308,7 +419,10 @@
           "height": 861,
           "psnr_db": 30.6615,
           "mean_absolute_error_0_255": 5.2698,
-          "global_ssim": 0.959713
+          "global_ssim": 0.959713,
+          "sharpness_ratio": 0.2918,
+          "luminance_contrast_ratio": 0.9577,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000060.png",
@@ -316,7 +430,10 @@
           "height": 861,
           "psnr_db": 30.696,
           "mean_absolute_error_0_255": 5.1211,
-          "global_ssim": 0.954423
+          "global_ssim": 0.954423,
+          "sharpness_ratio": 0.2954,
+          "luminance_contrast_ratio": 0.959,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000070.png",
@@ -324,7 +441,10 @@
           "height": 861,
           "psnr_db": 25.6083,
           "mean_absolute_error_0_255": 11.3399,
-          "global_ssim": 0.926779
+          "global_ssim": 0.926779,
+          "sharpness_ratio": 0.2776,
+          "luminance_contrast_ratio": 0.9849,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000080.png",
@@ -332,7 +452,10 @@
           "height": 861,
           "psnr_db": 29.5986,
           "mean_absolute_error_0_255": 5.7717,
-          "global_ssim": 0.928557
+          "global_ssim": 0.928557,
+          "sharpness_ratio": 0.2215,
+          "luminance_contrast_ratio": 0.9416,
+          "excess_dark_pixel_fraction": 0.0
         }
       ]
     },
@@ -343,6 +466,9 @@
       "median_psnr_db": 31.4903,
       "mean_absolute_error_0_255": 5.3443,
       "mean_global_ssim": 0.952169,
+      "mean_sharpness_ratio": 0.2879,
+      "mean_luminance_contrast_ratio": 0.9568,
+      "mean_excess_dark_pixel_fraction": 0.0,
       "images": [
         {
           "image": "000000.png",
@@ -350,7 +476,10 @@
           "height": 861,
           "psnr_db": 32.5697,
           "mean_absolute_error_0_255": 4.1267,
-          "global_ssim": 0.925483
+          "global_ssim": 0.925483,
+          "sharpness_ratio": 0.1673,
+          "luminance_contrast_ratio": 0.9185,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000010.png",
@@ -358,7 +487,10 @@
           "height": 861,
           "psnr_db": 34.6184,
           "mean_absolute_error_0_255": 3.1358,
-          "global_ssim": 0.952094
+          "global_ssim": 0.952094,
+          "sharpness_ratio": 0.2912,
+          "luminance_contrast_ratio": 0.9721,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000020.png",
@@ -366,7 +498,10 @@
           "height": 861,
           "psnr_db": 33.5685,
           "mean_absolute_error_0_255": 3.4266,
-          "global_ssim": 0.96655
+          "global_ssim": 0.96655,
+          "sharpness_ratio": 0.3279,
+          "luminance_contrast_ratio": 0.9629,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000030.png",
@@ -374,7 +509,10 @@
           "height": 861,
           "psnr_db": 31.8984,
           "mean_absolute_error_0_255": 4.2476,
-          "global_ssim": 0.966702
+          "global_ssim": 0.966702,
+          "sharpness_ratio": 0.2858,
+          "luminance_contrast_ratio": 0.9772,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000040.png",
@@ -382,7 +520,10 @@
           "height": 861,
           "psnr_db": 31.2683,
           "mean_absolute_error_0_255": 4.8702,
-          "global_ssim": 0.966206
+          "global_ssim": 0.966206,
+          "sharpness_ratio": 0.3462,
+          "luminance_contrast_ratio": 0.9797,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000050.png",
@@ -390,7 +531,10 @@
           "height": 861,
           "psnr_db": 30.5056,
           "mean_absolute_error_0_255": 5.5452,
-          "global_ssim": 0.963968
+          "global_ssim": 0.963968,
+          "sharpness_ratio": 0.314,
+          "luminance_contrast_ratio": 0.9541,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000060.png",
@@ -398,7 +542,10 @@
           "height": 861,
           "psnr_db": 31.4903,
           "mean_absolute_error_0_255": 4.6419,
-          "global_ssim": 0.96234
+          "global_ssim": 0.96234,
+          "sharpness_ratio": 0.3174,
+          "luminance_contrast_ratio": 0.9571,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000070.png",
@@ -406,7 +553,10 @@
           "height": 861,
           "psnr_db": 25.1147,
           "mean_absolute_error_0_255": 12.3367,
-          "global_ssim": 0.933619
+          "global_ssim": 0.933619,
+          "sharpness_ratio": 0.3027,
+          "luminance_contrast_ratio": 0.9566,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000080.png",
@@ -414,7 +564,10 @@
           "height": 861,
           "psnr_db": 29.7359,
           "mean_absolute_error_0_255": 5.7684,
-          "global_ssim": 0.93256
+          "global_ssim": 0.93256,
+          "sharpness_ratio": 0.239,
+          "luminance_contrast_ratio": 0.9332,
+          "excess_dark_pixel_fraction": 0.0
         }
       ]
     },
@@ -425,6 +578,9 @@
       "median_psnr_db": 31.1251,
       "mean_absolute_error_0_255": 5.3987,
       "mean_global_ssim": 0.951953,
+      "mean_sharpness_ratio": 0.2985,
+      "mean_luminance_contrast_ratio": 0.9605,
+      "mean_excess_dark_pixel_fraction": 0.0,
       "images": [
         {
           "image": "000000.png",
@@ -432,7 +588,10 @@
           "height": 861,
           "psnr_db": 32.5824,
           "mean_absolute_error_0_255": 4.1706,
-          "global_ssim": 0.926919
+          "global_ssim": 0.926919,
+          "sharpness_ratio": 0.1866,
+          "luminance_contrast_ratio": 0.917,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000010.png",
@@ -440,7 +599,10 @@
           "height": 861,
           "psnr_db": 34.4185,
           "mean_absolute_error_0_255": 3.2298,
-          "global_ssim": 0.950029
+          "global_ssim": 0.950029,
+          "sharpness_ratio": 0.2926,
+          "luminance_contrast_ratio": 0.9625,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000020.png",
@@ -448,7 +610,10 @@
           "height": 861,
           "psnr_db": 33.4593,
           "mean_absolute_error_0_255": 3.4413,
-          "global_ssim": 0.96543
+          "global_ssim": 0.96543,
+          "sharpness_ratio": 0.351,
+          "luminance_contrast_ratio": 0.9616,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000030.png",
@@ -456,7 +621,10 @@
           "height": 861,
           "psnr_db": 32.6194,
           "mean_absolute_error_0_255": 3.7963,
-          "global_ssim": 0.970546
+          "global_ssim": 0.970546,
+          "sharpness_ratio": 0.2949,
+          "luminance_contrast_ratio": 0.9868,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000040.png",
@@ -464,7 +632,10 @@
           "height": 861,
           "psnr_db": 31.1251,
           "mean_absolute_error_0_255": 5.1942,
-          "global_ssim": 0.971887
+          "global_ssim": 0.971887,
+          "sharpness_ratio": 0.3586,
+          "luminance_contrast_ratio": 0.998,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000050.png",
@@ -472,7 +643,10 @@
           "height": 861,
           "psnr_db": 30.992,
           "mean_absolute_error_0_255": 5.0962,
-          "global_ssim": 0.961558
+          "global_ssim": 0.961558,
+          "sharpness_ratio": 0.3042,
+          "luminance_contrast_ratio": 0.9499,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000060.png",
@@ -480,7 +654,10 @@
           "height": 861,
           "psnr_db": 30.3139,
           "mean_absolute_error_0_255": 5.4804,
-          "global_ssim": 0.956333
+          "global_ssim": 0.956333,
+          "sharpness_ratio": 0.3343,
+          "luminance_contrast_ratio": 0.9741,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000070.png",
@@ -488,7 +665,10 @@
           "height": 861,
           "psnr_db": 24.9027,
           "mean_absolute_error_0_255": 12.6316,
-          "global_ssim": 0.93317
+          "global_ssim": 0.93317,
+          "sharpness_ratio": 0.3018,
+          "luminance_contrast_ratio": 0.9495,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000080.png",
@@ -496,7 +676,10 @@
           "height": 861,
           "psnr_db": 30.0154,
           "mean_absolute_error_0_255": 5.5475,
-          "global_ssim": 0.931701
+          "global_ssim": 0.931701,
+          "sharpness_ratio": 0.2623,
+          "luminance_contrast_ratio": 0.9451,
+          "excess_dark_pixel_fraction": 0.0
         }
       ]
     },
@@ -507,6 +690,9 @@
       "median_psnr_db": 32.7143,
       "mean_absolute_error_0_255": 4.959,
       "mean_global_ssim": 0.955734,
+      "mean_sharpness_ratio": 0.3203,
+      "mean_luminance_contrast_ratio": 0.9654,
+      "mean_excess_dark_pixel_fraction": 0.0,
       "images": [
         {
           "image": "000000.png",
@@ -514,7 +700,10 @@
           "height": 861,
           "psnr_db": 32.7143,
           "mean_absolute_error_0_255": 4.0846,
-          "global_ssim": 0.931098
+          "global_ssim": 0.931098,
+          "sharpness_ratio": 0.2075,
+          "luminance_contrast_ratio": 0.9299,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000010.png",
@@ -522,7 +711,10 @@
           "height": 861,
           "psnr_db": 34.361,
           "mean_absolute_error_0_255": 3.179,
-          "global_ssim": 0.94875
+          "global_ssim": 0.94875,
+          "sharpness_ratio": 0.301,
+          "luminance_contrast_ratio": 0.9635,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000020.png",
@@ -530,7 +722,10 @@
           "height": 861,
           "psnr_db": 33.4164,
           "mean_absolute_error_0_255": 3.5122,
-          "global_ssim": 0.964954
+          "global_ssim": 0.964954,
+          "sharpness_ratio": 0.3675,
+          "luminance_contrast_ratio": 0.9549,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000030.png",
@@ -538,7 +733,10 @@
           "height": 861,
           "psnr_db": 32.8317,
           "mean_absolute_error_0_255": 3.7539,
-          "global_ssim": 0.972234
+          "global_ssim": 0.972234,
+          "sharpness_ratio": 0.3185,
+          "luminance_contrast_ratio": 0.9859,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000040.png",
@@ -546,7 +744,10 @@
           "height": 861,
           "psnr_db": 32.8879,
           "mean_absolute_error_0_255": 3.9338,
-          "global_ssim": 0.97415
+          "global_ssim": 0.97415,
+          "sharpness_ratio": 0.3691,
+          "luminance_contrast_ratio": 0.9838,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000050.png",
@@ -554,7 +755,10 @@
           "height": 861,
           "psnr_db": 31.2518,
           "mean_absolute_error_0_255": 5.0159,
-          "global_ssim": 0.968026
+          "global_ssim": 0.968026,
+          "sharpness_ratio": 0.3496,
+          "luminance_contrast_ratio": 0.9663,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000060.png",
@@ -562,7 +766,10 @@
           "height": 861,
           "psnr_db": 31.3868,
           "mean_absolute_error_0_255": 4.7152,
-          "global_ssim": 0.962167
+          "global_ssim": 0.962167,
+          "sharpness_ratio": 0.3462,
+          "luminance_contrast_ratio": 0.9527,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000070.png",
@@ -570,7 +777,10 @@
           "height": 861,
           "psnr_db": 25.5806,
           "mean_absolute_error_0_255": 11.4652,
-          "global_ssim": 0.938159
+          "global_ssim": 0.938159,
+          "sharpness_ratio": 0.3407,
+          "luminance_contrast_ratio": 0.9802,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000080.png",
@@ -578,7 +788,10 @@
           "height": 861,
           "psnr_db": 30.7853,
           "mean_absolute_error_0_255": 4.9713,
-          "global_ssim": 0.942067
+          "global_ssim": 0.942067,
+          "sharpness_ratio": 0.2823,
+          "luminance_contrast_ratio": 0.9717,
+          "excess_dark_pixel_fraction": 0.0
         }
       ]
     },
@@ -589,6 +802,9 @@
       "median_psnr_db": 32.4291,
       "mean_absolute_error_0_255": 4.9577,
       "mean_global_ssim": 0.957212,
+      "mean_sharpness_ratio": 0.3273,
+      "mean_luminance_contrast_ratio": 0.9734,
+      "mean_excess_dark_pixel_fraction": 0.0,
       "images": [
         {
           "image": "000000.png",
@@ -596,7 +812,10 @@
           "height": 861,
           "psnr_db": 33.1884,
           "mean_absolute_error_0_255": 3.8261,
-          "global_ssim": 0.936285
+          "global_ssim": 0.936285,
+          "sharpness_ratio": 0.2267,
+          "luminance_contrast_ratio": 0.9449,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000010.png",
@@ -604,7 +823,10 @@
           "height": 861,
           "psnr_db": 34.692,
           "mean_absolute_error_0_255": 3.1036,
-          "global_ssim": 0.952528
+          "global_ssim": 0.952528,
+          "sharpness_ratio": 0.3108,
+          "luminance_contrast_ratio": 0.9648,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000020.png",
@@ -612,7 +834,10 @@
           "height": 861,
           "psnr_db": 34.103,
           "mean_absolute_error_0_255": 3.2215,
-          "global_ssim": 0.970456
+          "global_ssim": 0.970456,
+          "sharpness_ratio": 0.3799,
+          "luminance_contrast_ratio": 0.9692,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000030.png",
@@ -620,7 +845,10 @@
           "height": 861,
           "psnr_db": 32.837,
           "mean_absolute_error_0_255": 3.6488,
-          "global_ssim": 0.971787
+          "global_ssim": 0.971787,
+          "sharpness_ratio": 0.3128,
+          "luminance_contrast_ratio": 0.9833,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000040.png",
@@ -628,7 +856,10 @@
           "height": 861,
           "psnr_db": 32.4291,
           "mean_absolute_error_0_255": 4.1948,
-          "global_ssim": 0.972545
+          "global_ssim": 0.972545,
+          "sharpness_ratio": 0.3789,
+          "luminance_contrast_ratio": 0.9891,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000050.png",
@@ -636,7 +867,10 @@
           "height": 861,
           "psnr_db": 30.6116,
           "mean_absolute_error_0_255": 5.4304,
-          "global_ssim": 0.964966
+          "global_ssim": 0.964966,
+          "sharpness_ratio": 0.346,
+          "luminance_contrast_ratio": 0.9729,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000060.png",
@@ -644,7 +878,10 @@
           "height": 861,
           "psnr_db": 30.2432,
           "mean_absolute_error_0_255": 5.873,
-          "global_ssim": 0.965641
+          "global_ssim": 0.965641,
+          "sharpness_ratio": 0.3596,
+          "luminance_contrast_ratio": 0.9677,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000070.png",
@@ -652,7 +889,10 @@
           "height": 861,
           "psnr_db": 26.4875,
           "mean_absolute_error_0_255": 10.0868,
-          "global_ssim": 0.941856
+          "global_ssim": 0.941856,
+          "sharpness_ratio": 0.3324,
+          "luminance_contrast_ratio": 0.9731,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000080.png",
@@ -660,7 +900,10 @@
           "height": 861,
           "psnr_db": 30.4017,
           "mean_absolute_error_0_255": 5.2345,
-          "global_ssim": 0.93884
+          "global_ssim": 0.93884,
+          "sharpness_ratio": 0.2987,
+          "luminance_contrast_ratio": 0.9959,
+          "excess_dark_pixel_fraction": 0.0
         }
       ]
     },
@@ -671,6 +914,9 @@
       "median_psnr_db": 32.5387,
       "mean_absolute_error_0_255": 4.8029,
       "mean_global_ssim": 0.959098,
+      "mean_sharpness_ratio": 0.3348,
+      "mean_luminance_contrast_ratio": 0.9709,
+      "mean_excess_dark_pixel_fraction": 0.0,
       "images": [
         {
           "image": "000000.png",
@@ -678,7 +924,10 @@
           "height": 861,
           "psnr_db": 33.4544,
           "mean_absolute_error_0_255": 3.7146,
-          "global_ssim": 0.941998
+          "global_ssim": 0.941998,
+          "sharpness_ratio": 0.2282,
+          "luminance_contrast_ratio": 0.9586,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000010.png",
@@ -686,7 +935,10 @@
           "height": 861,
           "psnr_db": 35.3201,
           "mean_absolute_error_0_255": 2.9376,
-          "global_ssim": 0.959235
+          "global_ssim": 0.959235,
+          "sharpness_ratio": 0.3146,
+          "luminance_contrast_ratio": 0.9613,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000020.png",
@@ -694,7 +946,10 @@
           "height": 861,
           "psnr_db": 33.8061,
           "mean_absolute_error_0_255": 3.3463,
-          "global_ssim": 0.968636
+          "global_ssim": 0.968636,
+          "sharpness_ratio": 0.3792,
+          "luminance_contrast_ratio": 0.9683,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000030.png",
@@ -702,7 +957,10 @@
           "height": 861,
           "psnr_db": 32.5387,
           "mean_absolute_error_0_255": 3.8308,
-          "global_ssim": 0.969501
+          "global_ssim": 0.969501,
+          "sharpness_ratio": 0.3121,
+          "luminance_contrast_ratio": 0.9725,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000040.png",
@@ -710,7 +968,10 @@
           "height": 861,
           "psnr_db": 32.8399,
           "mean_absolute_error_0_255": 4.0421,
-          "global_ssim": 0.974168
+          "global_ssim": 0.974168,
+          "sharpness_ratio": 0.3809,
+          "luminance_contrast_ratio": 0.9737,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000050.png",
@@ -718,7 +979,10 @@
           "height": 861,
           "psnr_db": 31.0322,
           "mean_absolute_error_0_255": 5.1297,
-          "global_ssim": 0.966325
+          "global_ssim": 0.966325,
+          "sharpness_ratio": 0.364,
+          "luminance_contrast_ratio": 0.9801,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000060.png",
@@ -726,7 +990,10 @@
           "height": 861,
           "psnr_db": 31.5032,
           "mean_absolute_error_0_255": 4.7671,
-          "global_ssim": 0.967002
+          "global_ssim": 0.967002,
+          "sharpness_ratio": 0.3748,
+          "luminance_contrast_ratio": 0.9603,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000070.png",
@@ -734,7 +1001,10 @@
           "height": 861,
           "psnr_db": 26.4189,
           "mean_absolute_error_0_255": 10.248,
-          "global_ssim": 0.944136
+          "global_ssim": 0.944136,
+          "sharpness_ratio": 0.3487,
+          "luminance_contrast_ratio": 0.9642,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000080.png",
@@ -742,7 +1012,10 @@
           "height": 861,
           "psnr_db": 30.4757,
           "mean_absolute_error_0_255": 5.2101,
-          "global_ssim": 0.940878
+          "global_ssim": 0.940878,
+          "sharpness_ratio": 0.3106,
+          "luminance_contrast_ratio": 0.999,
+          "excess_dark_pixel_fraction": 0.0
         }
       ]
     },
@@ -753,6 +1026,9 @@
       "median_psnr_db": 32.4392,
       "mean_absolute_error_0_255": 4.6879,
       "mean_global_ssim": 0.959408,
+      "mean_sharpness_ratio": 0.3429,
+      "mean_luminance_contrast_ratio": 0.9752,
+      "mean_excess_dark_pixel_fraction": 0.0,
       "images": [
         {
           "image": "000000.png",
@@ -760,7 +1036,10 @@
           "height": 861,
           "psnr_db": 33.2629,
           "mean_absolute_error_0_255": 3.8505,
-          "global_ssim": 0.940776
+          "global_ssim": 0.940776,
+          "sharpness_ratio": 0.2369,
+          "luminance_contrast_ratio": 0.9655,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000010.png",
@@ -768,7 +1047,10 @@
           "height": 861,
           "psnr_db": 35.0168,
           "mean_absolute_error_0_255": 3.0108,
-          "global_ssim": 0.956208
+          "global_ssim": 0.956208,
+          "sharpness_ratio": 0.3215,
+          "luminance_contrast_ratio": 0.974,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000020.png",
@@ -776,7 +1058,10 @@
           "height": 861,
           "psnr_db": 34.0799,
           "mean_absolute_error_0_255": 3.209,
-          "global_ssim": 0.970397
+          "global_ssim": 0.970397,
+          "sharpness_ratio": 0.3914,
+          "luminance_contrast_ratio": 0.9762,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000030.png",
@@ -784,7 +1069,10 @@
           "height": 861,
           "psnr_db": 32.6601,
           "mean_absolute_error_0_255": 3.7876,
-          "global_ssim": 0.971497
+          "global_ssim": 0.971497,
+          "sharpness_ratio": 0.3171,
+          "luminance_contrast_ratio": 0.9751,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000040.png",
@@ -792,7 +1080,10 @@
           "height": 861,
           "psnr_db": 32.4392,
           "mean_absolute_error_0_255": 4.184,
-          "global_ssim": 0.972769
+          "global_ssim": 0.972769,
+          "sharpness_ratio": 0.3899,
+          "luminance_contrast_ratio": 0.9856,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000050.png",
@@ -800,7 +1091,10 @@
           "height": 861,
           "psnr_db": 31.2663,
           "mean_absolute_error_0_255": 4.9556,
-          "global_ssim": 0.966215
+          "global_ssim": 0.966215,
+          "sharpness_ratio": 0.3715,
+          "luminance_contrast_ratio": 0.9749,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000060.png",
@@ -808,7 +1102,10 @@
           "height": 861,
           "psnr_db": 32.238,
           "mean_absolute_error_0_255": 4.1944,
-          "global_ssim": 0.968317
+          "global_ssim": 0.968317,
+          "sharpness_ratio": 0.3711,
+          "luminance_contrast_ratio": 0.9647,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000070.png",
@@ -816,7 +1113,10 @@
           "height": 861,
           "psnr_db": 26.4957,
           "mean_absolute_error_0_255": 10.1524,
-          "global_ssim": 0.942509
+          "global_ssim": 0.942509,
+          "sharpness_ratio": 0.3623,
+          "luminance_contrast_ratio": 0.9753,
+          "excess_dark_pixel_fraction": 0.0
         },
         {
           "image": "000080.png",
@@ -824,7 +1124,10 @@
           "height": 861,
           "psnr_db": 30.9972,
           "mean_absolute_error_0_255": 4.8465,
-          "global_ssim": 0.94598
+          "global_ssim": 0.94598,
+          "sharpness_ratio": 0.3243,
+          "luminance_contrast_ratio": 0.9857,
+          "excess_dark_pixel_fraction": 0.0
         }
       ]
     }

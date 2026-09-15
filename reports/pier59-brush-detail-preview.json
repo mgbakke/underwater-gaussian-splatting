@@ -1,0 +1,415 @@
+{
+  "name": "pier59-brush-detail-preview-7k",
+  "status": "completed",
+  "return_code": 0,
+  "started_at": "2026-09-14T18:44:30-07:00",
+  "completed_at": "2026-09-14T18:50:25-07:00",
+  "wall_clock_seconds": 354.833,
+  "host": {
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "machine": "arm64"
+  },
+  "brush": {
+    "version": "0.3.0",
+    "binary_path": "/private/tmp/brush-check/brush-app-aarch64-apple-darwin/brush_app",
+    "archive_sha256": "65b2631398c839be3c1d4d7160fe2326389dec87830aac0710985e6690a1048c"
+  },
+  "input": {
+    "path": "data/sfm/pier59-video-pilot/undistorted",
+    "image_count": 86,
+    "image_resolution": [
+      1927,
+      1080
+    ]
+  },
+  "parameters": {
+    "total_steps": 7000,
+    "max_resolution": 1920,
+    "max_frames": 86,
+    "max_splats": 2000000,
+    "growth_stop_iter": 5500,
+    "refine_every": 100,
+    "growth_select_fraction": 0.15,
+    "opac_loss_weight": 1e-09,
+    "scale_loss_weight": 1e-08,
+    "eval_split_every": 10,
+    "eval_every": 1000,
+    "export_every": 7000,
+    "export_name": "pier59-detail-{iter}.ply"
+  },
+  "command": [
+    "/private/tmp/brush-check/brush-app-aarch64-apple-darwin/brush_app",
+    "--total-steps",
+    "7000",
+    "--max-resolution",
+    "1920",
+    "--max-frames",
+    "86",
+    "--max-splats",
+    "2000000",
+    "--growth-stop-iter",
+    "5500",
+    "--refine-every",
+    "100",
+    "--growth-select-fraction",
+    "0.15",
+    "--opac-loss-weight",
+    "1e-09",
+    "--scale-loss-weight",
+    "1e-08",
+    "--eval-split-every",
+    "10",
+    "--eval-every",
+    "1000",
+    "--eval-save-to-disk",
+    "--export-every",
+    "7000",
+    "--export-path",
+    "/Users/marcusbakke/.copilot/repos/copilot-worktrees/underwater-gaussian-splatting/mgbakke-literate-broccoli/data/training/pier59-brush-detail-preview-7k",
+    "--export-name",
+    "pier59-detail-{iter}.ply",
+    "/Users/marcusbakke/.copilot/repos/copilot-worktrees/underwater-gaussian-splatting/mgbakke-literate-broccoli/data/sfm/pier59-video-pilot/undistorted"
+  ],
+  "resource_usage": {
+    "maximum_resident_set_size_bytes": 1976172544,
+    "peak_memory_footprint_bytes": 5355571864,
+    "page_reclaims": 11185886,
+    "page_faults": 639,
+    "swaps": 0
+  },
+  "local_artifacts": {
+    "output_directory": "data/training/pier59-brush-detail-preview-7k",
+    "file_count": 66,
+    "total_bytes": 394822190,
+    "training_log": "data/training/pier59-brush-detail-preview-7k/training.log",
+    "resource_usage": "data/training/pier59-brush-detail-preview-7k/resource-usage.txt",
+    "evaluation_render_resolution": [
+      1920,
+      1076
+    ],
+    "files": [
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_1000/000000.png",
+        "bytes": 1512807,
+        "sha256": "19c187c7a64daae7a45a04091617584872f69a402df4f45482698909505cc1bf"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_1000/000010.png",
+        "bytes": 1572862,
+        "sha256": "eb7f5aaf3a6c5f66b9f91dae4dd11eb32861347483a6de400e845feee7292d46"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_1000/000020.png",
+        "bytes": 1596478,
+        "sha256": "6ae02ae17c8b71ba5511917f224e8733146e2b2c59f09d57ae8a0dcf4a6ec489"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_1000/000030.png",
+        "bytes": 1771758,
+        "sha256": "b9baba2bbd0627f6f3d9e7188baf3d21acca9f32b730757c4446c1ee023ee898"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_1000/000040.png",
+        "bytes": 1910477,
+        "sha256": "f92efb7226e1ae8db8569ac89f2242300075d3c4dfe0c1b3fee74f9b5728f177"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_1000/000050.png",
+        "bytes": 1911375,
+        "sha256": "a2fd0f1c93da1fe3447f8cf883d3bee01f26b21dd4eea581456a6ba06336eb1f"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_1000/000060.png",
+        "bytes": 1806854,
+        "sha256": "48c9cdb7943311dd5e5c655a4772ea3bb09d144dca1874cb636ce0499334c159"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_1000/000070.png",
+        "bytes": 1693921,
+        "sha256": "a1c4721d389fcad5522f0b4bf6b2f3fecd917a7256aad81ea434a1b20a950033"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_1000/000080.png",
+        "bytes": 1498683,
+        "sha256": "421426e33f60481e2bf95353b1b16a9442076ea542fdf27ae7023545a8b2f974"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_2000/000000.png",
+        "bytes": 1716695,
+        "sha256": "766f1cdaf70f216990920209d37f3d884b7e7c7040d179bd02fcb9f75f18fecc"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_2000/000010.png",
+        "bytes": 1730926,
+        "sha256": "95f55b0b9b0047ae05708842ff9a77f4a56299b334e40ccb6196663c6f760eb0"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_2000/000020.png",
+        "bytes": 1789638,
+        "sha256": "ae425de91baffe04fcf86f15d176450de0367efee3aa6fba7c15d95ed314ae0b"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_2000/000030.png",
+        "bytes": 1909415,
+        "sha256": "8833585f38591796cd66d8cfaaf02fb0e43d829bde0b2c058df8503b60d5a48b"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_2000/000040.png",
+        "bytes": 2022908,
+        "sha256": "80f23358811710bb4025e2f6a4722b1617f28df37a9fb944c6d322a42985c13c"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_2000/000050.png",
+        "bytes": 2014942,
+        "sha256": "7037ae1d3958d48700628b5f65c716b018b9f420b42b20a261682af46639d43b"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_2000/000060.png",
+        "bytes": 1952034,
+        "sha256": "3ce52c49de42035c8393af19bc393275ad0eef537f5835fbb5abe522fd225de9"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_2000/000070.png",
+        "bytes": 1871658,
+        "sha256": "51c87a8c14c9fc80f45981cf951dcfacfe138f85f03f6027c613e96c97ac36f8"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_2000/000080.png",
+        "bytes": 1700007,
+        "sha256": "d0d423cd2a4c7dd29e8ee5a832b16c87cbe86fb680828983c684279aa257e892"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_3000/000000.png",
+        "bytes": 1822367,
+        "sha256": "381f3d24d8addd39493ac3c4d8b6f69f7743185d92680c0253e3f3eae274e224"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_3000/000010.png",
+        "bytes": 1810084,
+        "sha256": "a27cc40f6483adc7a4f1c49f725e9400611293c57065a253b53a2d888cf496ae"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_3000/000020.png",
+        "bytes": 1876842,
+        "sha256": "408d40f122eb5b28479d7d02c331374b252c215ee4f1a845a4b677017ce066c7"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_3000/000030.png",
+        "bytes": 2011107,
+        "sha256": "2f242ee8ca27f2ec65f32b0c03acbd2d9de8e0e0228b039166be0c15083934c5"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_3000/000040.png",
+        "bytes": 2104648,
+        "sha256": "a586a93093eede82d1b60d7c94ecd16505c986dee7a64e83350b031d726ad6b8"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_3000/000050.png",
+        "bytes": 2095966,
+        "sha256": "944cc56eab735446acd114073f7d52968cfb79b1c89be7cfd316443bcb0f6ba2"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_3000/000060.png",
+        "bytes": 2079279,
+        "sha256": "90cb8f2664d3501fb9994335e3670ff94bb95efa81a3e1a7d51f3a47ea509ae4"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_3000/000070.png",
+        "bytes": 2012616,
+        "sha256": "d4a409fec951b04f2902b0f60ea8603fd848b46facfcf0e00bbcf979b691b700"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_3000/000080.png",
+        "bytes": 1810986,
+        "sha256": "0fc34425b4561bc270344eb7825d5ff89b08ed63d940c15bf31108b6e674e6c3"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_4000/000000.png",
+        "bytes": 1881212,
+        "sha256": "f9d2f113c1df41dbcf138451f83207ef81a51051658e2d9964441b71e0370b06"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_4000/000010.png",
+        "bytes": 1861432,
+        "sha256": "e99d6cae414e3fd3e60ea5cdf0d2bf5f86fe2311d2473b3629638ed40e36b0e8"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_4000/000020.png",
+        "bytes": 1930345,
+        "sha256": "0da2a4e06786783b9315b5ad72078a55d008961d7d0652db1571267fdc9436f8"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_4000/000030.png",
+        "bytes": 2059884,
+        "sha256": "3b5fafc47d633a4973e73c57b4a15b9cc5149a303b768ac70b0c2584886abcb4"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_4000/000040.png",
+        "bytes": 2135092,
+        "sha256": "77f6983ceab9e4a115f82fc9e8d61b0dfee1cda58789df003c62c19cb7c8a6c9"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_4000/000050.png",
+        "bytes": 2132370,
+        "sha256": "f4e7c826f891f13c4ba217a8b1130c4c2ec0be436a5e127531b314c1ad8813be"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_4000/000060.png",
+        "bytes": 2133849,
+        "sha256": "7f623f6158688a809203ea052d2ac62b51e68d521b012cb6db07b7f0ae1077b6"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_4000/000070.png",
+        "bytes": 2045546,
+        "sha256": "7ed6ee0a1d2c7f918f424c6edce2b718255f1fb35eb547600a920251f9c40a01"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_4000/000080.png",
+        "bytes": 1880018,
+        "sha256": "2c5686f960296f509b299e6da5df0769987bdda5739da317bd9ffe1f3d2f1502"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_5000/000000.png",
+        "bytes": 1912600,
+        "sha256": "807e6bc87b4ce590bfdb86f471c6553cdcf10e235f5133f5e95d0e67ca8830ee"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_5000/000010.png",
+        "bytes": 1882780,
+        "sha256": "8a74816b80563e8c0fab1c926330398239a6ed9b8718b7920a5fe0348b431c9c"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_5000/000020.png",
+        "bytes": 1953957,
+        "sha256": "e55ab98af21450d0bbdb3e1ae9c0ef007e6eb56c0c0dd4a0e3e7da6f2562e598"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_5000/000030.png",
+        "bytes": 2083824,
+        "sha256": "6d58f3de8644a1d4ce250ca818272a5f02dff20bbc84984b1c4e54c97afcc261"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_5000/000040.png",
+        "bytes": 2155258,
+        "sha256": "156c34cbb981eedf575e2911f2e3c9633832ffcc5058394abddc77436d30856e"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_5000/000050.png",
+        "bytes": 2143507,
+        "sha256": "6cfe26a9dfa2e9f04b52b2aadabd1f9a218bbc20473b557e202aae150b0cced1"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_5000/000060.png",
+        "bytes": 2153188,
+        "sha256": "c9fd6de438468f9af712ad4f7479f213a640e301f841720f2f4bb2742dca0e8a"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_5000/000070.png",
+        "bytes": 2070311,
+        "sha256": "8df4630d7cd6aab1db25af8247ac43c3f303c97bd1e95da612ad51a76673faba"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_5000/000080.png",
+        "bytes": 1904863,
+        "sha256": "3c3feb34bd51a70a3362908dfe65e2e418647b1e8e1e1be748ca8bf25f51bef9"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_6000/000000.png",
+        "bytes": 1937213,
+        "sha256": "e029301a04e71413aa276ce8b6395c6961304b664779870599413bd6b507bbb0"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_6000/000010.png",
+        "bytes": 1887805,
+        "sha256": "ea9ceaecfbe1adf53329d0d3543fee47b19202beb11ddf5b7fcc6d55763591d0"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_6000/000020.png",
+        "bytes": 1964212,
+        "sha256": "4cbfb09751e44fc5d256ad41f274e32656f9c3687bdb1d22f26e315463836996"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_6000/000030.png",
+        "bytes": 2106395,
+        "sha256": "6b47e65442f1d83192b5b1a20bda694d4abee41c8a5b6c12d52fedd238cf6c05"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_6000/000040.png",
+        "bytes": 2173598,
+        "sha256": "2126d8cd9eae5cd571e59f6446a5f6ffa779f802ef96298c740917c20e1d76cf"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_6000/000050.png",
+        "bytes": 2154054,
+        "sha256": "206014ec2eb38b3894ef291d864b7f5caf13d78e342241640d29fd9d5262631d"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_6000/000060.png",
+        "bytes": 2165697,
+        "sha256": "924e6e67003da3cbafbe95e2aec8ece01333a672a8b2a8c42d0e6a019c4c5544"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_6000/000070.png",
+        "bytes": 2092132,
+        "sha256": "4517c42da05c3c262510c46ac899ebebef20d5c6c8ab509a1dcfa0a0be94859e"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_6000/000080.png",
+        "bytes": 1935586,
+        "sha256": "5ade47a97285edd89062dad21b5518724299cce3ed43ad981458ab0a8f20395e"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_7000/000000.png",
+        "bytes": 1949239,
+        "sha256": "98aac153ce1c952a5917278ee747800a2febcfde25486b42983921962c2fbf3b"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_7000/000010.png",
+        "bytes": 1890802,
+        "sha256": "120047a590dec29f1d63b0d24bbf1c2436702aff9996d7bcb84b7c922df0e3ef"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_7000/000020.png",
+        "bytes": 1970569,
+        "sha256": "834ca8ca82262b487f64869d20d964990609e14610599d8090628964f2c3964a"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_7000/000030.png",
+        "bytes": 2111161,
+        "sha256": "10277c169a6c1efcb10533e91ce103bc90e54b844c18dc933a81d046ef5f8c8f"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_7000/000040.png",
+        "bytes": 2172097,
+        "sha256": "3d7d1397a6a7deef8069f7862fd2aa9f20f38afbea369e61f0ca215293c25300"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_7000/000050.png",
+        "bytes": 2165961,
+        "sha256": "8f953a222bf3a533c4c338543caab987206dcdac2494ba095734e806a482032b"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_7000/000060.png",
+        "bytes": 2157804,
+        "sha256": "57ca62e6f0de81a8959f3474f309ab630d7e5f3eb851e8851c813095fbab15cb"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_7000/000070.png",
+        "bytes": 2103587,
+        "sha256": "817a2583444749f6b3ea2247ad4046cc315a974d62c2e4409d63197932897c43"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/eval_7000/000080.png",
+        "bytes": 1950656,
+        "sha256": "dca9938c242b7a655e650db96e3304233e3067778a4060b93bd01c0584d60a61"
+      },
+      {
+        "path": "data/training/pier59-brush-detail-preview-7k/pier59-detail-7000.ply",
+        "bytes": 272005476,
+        "sha256": "af5abd4fc792c90d8f5a274d68ee678689c9d36ebfb418247fd5756d4e350e84",
+        "splat_count": 1152559
+      }
+    ]
+  },
+  "warnings": []
+}

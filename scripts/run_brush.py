@@ -79,6 +79,13 @@ def load_config(path: Path) -> dict[str, Any]:
         return json.load(handle)
 
 
+def add_optional_argument(
+    command: list[str], config: dict[str, Any], key: str, flag: str
+) -> None:
+    if key in config:
+        command.extend([flag, str(config[key])])
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--config", type=Path, default=DEFAULT_CONFIG)
@@ -121,19 +128,32 @@ def main() -> None:
         str(config["max_splats"]),
         "--growth-stop-iter",
         str(config["growth_stop_iter"]),
-        "--eval-split-every",
-        str(config["eval_split_every"]),
-        "--eval-every",
-        str(config["eval_every"]),
-        "--eval-save-to-disk",
-        "--export-every",
-        str(config["export_every"]),
-        "--export-path",
-        str(output_path),
-        "--export-name",
-        config["export_name"],
-        str(input_path),
     ]
+    for key, flag in (
+        ("refine_every", "--refine-every"),
+        ("growth_grad_threshold", "--growth-grad-threshold"),
+        ("growth_select_fraction", "--growth-select-fraction"),
+        ("opac_loss_weight", "--opac-loss-weight"),
+        ("scale_loss_weight", "--scale-loss-weight"),
+        ("ssim_weight", "--ssim-weight"),
+    ):
+        add_optional_argument(command, config, key, flag)
+    command.extend(
+        [
+            "--eval-split-every",
+            str(config["eval_split_every"]),
+            "--eval-every",
+            str(config["eval_every"]),
+            "--eval-save-to-disk",
+            "--export-every",
+            str(config["export_every"]),
+            "--export-path",
+            str(output_path),
+            "--export-name",
+            config["export_name"],
+            str(input_path),
+        ]
+    )
     print(shlex.join(command))
     if args.dry_run:
         return
@@ -194,11 +214,18 @@ def main() -> None:
                 "max_frames",
                 "max_splats",
                 "growth_stop_iter",
+                "refine_every",
+                "growth_grad_threshold",
+                "growth_select_fraction",
+                "opac_loss_weight",
+                "scale_loss_weight",
+                "ssim_weight",
                 "eval_split_every",
                 "eval_every",
                 "export_every",
                 "export_name",
             )
+            if key in config
         },
         "command": command,
         "resource_usage": parse_resource_usage(resource_text),

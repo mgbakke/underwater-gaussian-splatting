@@ -1,0 +1,1023 @@
+{
+  "generated_at": "2026-09-14T19:16:34-07:00",
+  "training_directory": "data/training/pier59-brush-high-quality-18k",
+  "ground_truth_directory": "data/sfm/pier59-video-pilot/undistorted/images",
+  "metrics": {
+    "psnr": "RGB PSNR after Lanczos-resizing ground truth to render dimensions.",
+    "mean_absolute_error": "Mean absolute RGB error on the 0-255 scale.",
+    "global_ssim": "Global per-channel SSIM averaged over RGB; a lightweight proxy, not windowed SSIM.",
+    "sharpness_ratio": "Rendered/reference luminance Laplacian variance. Values below 1 indicate softer output.",
+    "luminance_contrast_ratio": "Rendered/reference luminance standard deviation. Values below 1 indicate reduced contrast.",
+    "excess_dark_pixel_fraction": "Fraction of pixels below luminance 10 where ground truth exceeds 30; a conservative hole indicator."
+  },
+  "stages": [
+    {
+      "iteration": 2000,
+      "held_out_image_count": 9,
+      "mean_psnr_db": 30.4466,
+      "median_psnr_db": 30.2399,
+      "mean_absolute_error_0_255": 5.6436,
+      "mean_global_ssim": 0.940766,
+      "mean_sharpness_ratio": 0.2634,
+      "mean_luminance_contrast_ratio": 0.9417,
+      "mean_excess_dark_pixel_fraction": 0.0,
+      "images": [
+        {
+          "image": "000000.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 32.4303,
+          "mean_absolute_error_0_255": 4.2341,
+          "global_ssim": 0.921736,
+          "sharpness_ratio": 0.1574,
+          "luminance_contrast_ratio": 0.9053,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000010.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 34.056,
+          "mean_absolute_error_0_255": 3.2843,
+          "global_ssim": 0.94503,
+          "sharpness_ratio": 0.2735,
+          "luminance_contrast_ratio": 0.9593,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000020.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 32.4403,
+          "mean_absolute_error_0_255": 3.9587,
+          "global_ssim": 0.956252,
+          "sharpness_ratio": 0.3004,
+          "luminance_contrast_ratio": 0.9417,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000030.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 30.2076,
+          "mean_absolute_error_0_255": 4.9973,
+          "global_ssim": 0.948778,
+          "sharpness_ratio": 0.2705,
+          "luminance_contrast_ratio": 0.9676,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000040.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 30.2399,
+          "mean_absolute_error_0_255": 5.5776,
+          "global_ssim": 0.961842,
+          "sharpness_ratio": 0.3213,
+          "luminance_contrast_ratio": 0.978,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000050.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 29.4035,
+          "mean_absolute_error_0_255": 6.2136,
+          "global_ssim": 0.954212,
+          "sharpness_ratio": 0.2948,
+          "luminance_contrast_ratio": 0.9581,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000060.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 30.9691,
+          "mean_absolute_error_0_255": 5.0028,
+          "global_ssim": 0.95812,
+          "sharpness_ratio": 0.2944,
+          "luminance_contrast_ratio": 0.9611,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000070.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 26.4598,
+          "mean_absolute_error_0_255": 9.9416,
+          "global_ssim": 0.927165,
+          "sharpness_ratio": 0.2658,
+          "luminance_contrast_ratio": 0.9401,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000080.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 27.813,
+          "mean_absolute_error_0_255": 7.5821,
+          "global_ssim": 0.893755,
+          "sharpness_ratio": 0.1927,
+          "luminance_contrast_ratio": 0.8637,
+          "excess_dark_pixel_fraction": 0.0
+        }
+      ]
+    },
+    {
+      "iteration": 4000,
+      "held_out_image_count": 9,
+      "mean_psnr_db": 31.393,
+      "median_psnr_db": 32.2731,
+      "mean_absolute_error_0_255": 5.3074,
+      "mean_global_ssim": 0.952883,
+      "mean_sharpness_ratio": 0.3509,
+      "mean_luminance_contrast_ratio": 0.9525,
+      "mean_excess_dark_pixel_fraction": 0.0,
+      "images": [
+        {
+          "image": "000000.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 32.729,
+          "mean_absolute_error_0_255": 4.095,
+          "global_ssim": 0.927606,
+          "sharpness_ratio": 0.2262,
+          "luminance_contrast_ratio": 0.9034,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000010.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 35.0721,
+          "mean_absolute_error_0_255": 3.0421,
+          "global_ssim": 0.95734,
+          "sharpness_ratio": 0.3432,
+          "luminance_contrast_ratio": 0.9649,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000020.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 33.9288,
+          "mean_absolute_error_0_255": 3.3783,
+          "global_ssim": 0.969478,
+          "sharpness_ratio": 0.4029,
+          "luminance_contrast_ratio": 0.9672,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000030.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 32.2731,
+          "mean_absolute_error_0_255": 3.9213,
+          "global_ssim": 0.967408,
+          "sharpness_ratio": 0.3515,
+          "luminance_contrast_ratio": 0.9767,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000040.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 32.2739,
+          "mean_absolute_error_0_255": 4.2616,
+          "global_ssim": 0.971322,
+          "sharpness_ratio": 0.4078,
+          "luminance_contrast_ratio": 0.986,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000050.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 31.1111,
+          "mean_absolute_error_0_255": 4.951,
+          "global_ssim": 0.96399,
+          "sharpness_ratio": 0.3783,
+          "luminance_contrast_ratio": 0.9675,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000060.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 31.1294,
+          "mean_absolute_error_0_255": 4.9309,
+          "global_ssim": 0.959823,
+          "sharpness_ratio": 0.384,
+          "luminance_contrast_ratio": 0.9626,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000070.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 24.6257,
+          "mean_absolute_error_0_255": 12.9363,
+          "global_ssim": 0.925284,
+          "sharpness_ratio": 0.3561,
+          "luminance_contrast_ratio": 0.9417,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000080.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 29.3936,
+          "mean_absolute_error_0_255": 6.2498,
+          "global_ssim": 0.933698,
+          "sharpness_ratio": 0.3077,
+          "luminance_contrast_ratio": 0.9026,
+          "excess_dark_pixel_fraction": 0.0
+        }
+      ]
+    },
+    {
+      "iteration": 6000,
+      "held_out_image_count": 9,
+      "mean_psnr_db": 31.733,
+      "median_psnr_db": 32.722,
+      "mean_absolute_error_0_255": 4.9577,
+      "mean_global_ssim": 0.955749,
+      "mean_sharpness_ratio": 0.3867,
+      "mean_luminance_contrast_ratio": 0.9641,
+      "mean_excess_dark_pixel_fraction": 0.0,
+      "images": [
+        {
+          "image": "000000.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 32.9225,
+          "mean_absolute_error_0_255": 4.0421,
+          "global_ssim": 0.931593,
+          "sharpness_ratio": 0.2711,
+          "luminance_contrast_ratio": 0.9198,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000010.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 35.4535,
+          "mean_absolute_error_0_255": 2.9116,
+          "global_ssim": 0.960297,
+          "sharpness_ratio": 0.3763,
+          "luminance_contrast_ratio": 0.9688,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000020.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 33.6023,
+          "mean_absolute_error_0_255": 3.3251,
+          "global_ssim": 0.966859,
+          "sharpness_ratio": 0.452,
+          "luminance_contrast_ratio": 0.9673,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000030.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 33.1665,
+          "mean_absolute_error_0_255": 3.4701,
+          "global_ssim": 0.974021,
+          "sharpness_ratio": 0.3924,
+          "luminance_contrast_ratio": 0.9871,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000040.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 32.722,
+          "mean_absolute_error_0_255": 4.0482,
+          "global_ssim": 0.974774,
+          "sharpness_ratio": 0.4496,
+          "luminance_contrast_ratio": 0.9824,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000050.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 31.7113,
+          "mean_absolute_error_0_255": 4.6621,
+          "global_ssim": 0.968438,
+          "sharpness_ratio": 0.4007,
+          "luminance_contrast_ratio": 0.9584,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000060.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 29.6497,
+          "mean_absolute_error_0_255": 5.9036,
+          "global_ssim": 0.952824,
+          "sharpness_ratio": 0.4226,
+          "luminance_contrast_ratio": 0.9787,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000070.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 26.0745,
+          "mean_absolute_error_0_255": 10.8029,
+          "global_ssim": 0.936436,
+          "sharpness_ratio": 0.3902,
+          "luminance_contrast_ratio": 0.9756,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000080.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 30.2947,
+          "mean_absolute_error_0_255": 5.4535,
+          "global_ssim": 0.936498,
+          "sharpness_ratio": 0.3258,
+          "luminance_contrast_ratio": 0.9387,
+          "excess_dark_pixel_fraction": 0.0
+        }
+      ]
+    },
+    {
+      "iteration": 8000,
+      "held_out_image_count": 9,
+      "mean_psnr_db": 31.5108,
+      "median_psnr_db": 32.243,
+      "mean_absolute_error_0_255": 5.2711,
+      "mean_global_ssim": 0.958771,
+      "mean_sharpness_ratio": 0.4071,
+      "mean_luminance_contrast_ratio": 0.9658,
+      "mean_excess_dark_pixel_fraction": 0.0,
+      "images": [
+        {
+          "image": "000000.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 33.4203,
+          "mean_absolute_error_0_255": 3.8012,
+          "global_ssim": 0.940062,
+          "sharpness_ratio": 0.3073,
+          "luminance_contrast_ratio": 0.9358,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000010.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 35.2888,
+          "mean_absolute_error_0_255": 3.0114,
+          "global_ssim": 0.95978,
+          "sharpness_ratio": 0.3947,
+          "luminance_contrast_ratio": 0.9685,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000020.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 34.5123,
+          "mean_absolute_error_0_255": 3.0476,
+          "global_ssim": 0.973105,
+          "sharpness_ratio": 0.4818,
+          "luminance_contrast_ratio": 0.966,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000030.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 32.9105,
+          "mean_absolute_error_0_255": 3.6291,
+          "global_ssim": 0.973844,
+          "sharpness_ratio": 0.4095,
+          "luminance_contrast_ratio": 0.9874,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000040.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 32.243,
+          "mean_absolute_error_0_255": 4.4229,
+          "global_ssim": 0.975772,
+          "sharpness_ratio": 0.4579,
+          "luminance_contrast_ratio": 0.9942,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000050.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 29.2748,
+          "mean_absolute_error_0_255": 6.6916,
+          "global_ssim": 0.966311,
+          "sharpness_ratio": 0.4095,
+          "luminance_contrast_ratio": 0.9891,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000060.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 30.2916,
+          "mean_absolute_error_0_255": 5.8676,
+          "global_ssim": 0.967719,
+          "sharpness_ratio": 0.4351,
+          "luminance_contrast_ratio": 0.9812,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000070.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 25.7169,
+          "mean_absolute_error_0_255": 11.2031,
+          "global_ssim": 0.936603,
+          "sharpness_ratio": 0.4187,
+          "luminance_contrast_ratio": 0.9678,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000080.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 29.9389,
+          "mean_absolute_error_0_255": 5.7656,
+          "global_ssim": 0.935744,
+          "sharpness_ratio": 0.349,
+          "luminance_contrast_ratio": 0.902,
+          "excess_dark_pixel_fraction": 0.0
+        }
+      ]
+    },
+    {
+      "iteration": 10000,
+      "held_out_image_count": 9,
+      "mean_psnr_db": 31.9092,
+      "median_psnr_db": 32.3728,
+      "mean_absolute_error_0_255": 5.0178,
+      "mean_global_ssim": 0.960571,
+      "mean_sharpness_ratio": 0.4284,
+      "mean_luminance_contrast_ratio": 0.974,
+      "mean_excess_dark_pixel_fraction": 0.0,
+      "images": [
+        {
+          "image": "000000.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 33.4185,
+          "mean_absolute_error_0_255": 3.8494,
+          "global_ssim": 0.943042,
+          "sharpness_ratio": 0.3132,
+          "luminance_contrast_ratio": 0.9504,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000010.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 35.6053,
+          "mean_absolute_error_0_255": 2.8789,
+          "global_ssim": 0.961909,
+          "sharpness_ratio": 0.4049,
+          "luminance_contrast_ratio": 0.9795,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000020.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 33.8115,
+          "mean_absolute_error_0_255": 3.3129,
+          "global_ssim": 0.968998,
+          "sharpness_ratio": 0.4952,
+          "luminance_contrast_ratio": 0.9752,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000030.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 32.4021,
+          "mean_absolute_error_0_255": 3.9539,
+          "global_ssim": 0.972038,
+          "sharpness_ratio": 0.4197,
+          "luminance_contrast_ratio": 0.9914,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000040.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 32.3728,
+          "mean_absolute_error_0_255": 4.2875,
+          "global_ssim": 0.974303,
+          "sharpness_ratio": 0.4797,
+          "luminance_contrast_ratio": 0.9942,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000050.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 31.5591,
+          "mean_absolute_error_0_255": 4.9367,
+          "global_ssim": 0.969712,
+          "sharpness_ratio": 0.4401,
+          "luminance_contrast_ratio": 0.9613,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000060.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 31.864,
+          "mean_absolute_error_0_255": 4.6041,
+          "global_ssim": 0.968339,
+          "sharpness_ratio": 0.4608,
+          "luminance_contrast_ratio": 0.9564,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000070.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 25.2243,
+          "mean_absolute_error_0_255": 12.3644,
+          "global_ssim": 0.941176,
+          "sharpness_ratio": 0.455,
+          "luminance_contrast_ratio": 0.9769,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000080.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 30.9255,
+          "mean_absolute_error_0_255": 4.9724,
+          "global_ssim": 0.945626,
+          "sharpness_ratio": 0.3874,
+          "luminance_contrast_ratio": 0.9806,
+          "excess_dark_pixel_fraction": 0.0
+        }
+      ]
+    },
+    {
+      "iteration": 12000,
+      "held_out_image_count": 9,
+      "mean_psnr_db": 32.2446,
+      "median_psnr_db": 33.1256,
+      "mean_absolute_error_0_255": 4.8055,
+      "mean_global_ssim": 0.961947,
+      "mean_sharpness_ratio": 0.4385,
+      "mean_luminance_contrast_ratio": 0.9715,
+      "mean_excess_dark_pixel_fraction": 0.0,
+      "images": [
+        {
+          "image": "000000.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 33.7952,
+          "mean_absolute_error_0_255": 3.6332,
+          "global_ssim": 0.945357,
+          "sharpness_ratio": 0.3344,
+          "luminance_contrast_ratio": 0.9519,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000010.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 36.0109,
+          "mean_absolute_error_0_255": 2.7718,
+          "global_ssim": 0.964793,
+          "sharpness_ratio": 0.4084,
+          "luminance_contrast_ratio": 0.9655,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000020.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 34.0387,
+          "mean_absolute_error_0_255": 3.2068,
+          "global_ssim": 0.969911,
+          "sharpness_ratio": 0.5063,
+          "luminance_contrast_ratio": 0.9635,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000030.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 33.1256,
+          "mean_absolute_error_0_255": 3.4,
+          "global_ssim": 0.973785,
+          "sharpness_ratio": 0.4294,
+          "luminance_contrast_ratio": 0.9929,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000040.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 33.2494,
+          "mean_absolute_error_0_255": 3.7753,
+          "global_ssim": 0.976069,
+          "sharpness_ratio": 0.4921,
+          "luminance_contrast_ratio": 0.9883,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000050.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 32.1486,
+          "mean_absolute_error_0_255": 4.4747,
+          "global_ssim": 0.971254,
+          "sharpness_ratio": 0.4523,
+          "luminance_contrast_ratio": 0.9659,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000060.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 31.8632,
+          "mean_absolute_error_0_255": 4.5,
+          "global_ssim": 0.968156,
+          "sharpness_ratio": 0.4861,
+          "luminance_contrast_ratio": 0.9778,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000070.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 25.1627,
+          "mean_absolute_error_0_255": 12.4356,
+          "global_ssim": 0.94424,
+          "sharpness_ratio": 0.4603,
+          "luminance_contrast_ratio": 0.9747,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000080.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 30.8067,
+          "mean_absolute_error_0_255": 5.0525,
+          "global_ssim": 0.943962,
+          "sharpness_ratio": 0.377,
+          "luminance_contrast_ratio": 0.9633,
+          "excess_dark_pixel_fraction": 0.0
+        }
+      ]
+    },
+    {
+      "iteration": 14000,
+      "held_out_image_count": 9,
+      "mean_psnr_db": 31.8683,
+      "median_psnr_db": 31.8015,
+      "mean_absolute_error_0_255": 5.0455,
+      "mean_global_ssim": 0.962751,
+      "mean_sharpness_ratio": 0.4443,
+      "mean_luminance_contrast_ratio": 0.9757,
+      "mean_excess_dark_pixel_fraction": 0.0,
+      "images": [
+        {
+          "image": "000000.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 33.9244,
+          "mean_absolute_error_0_255": 3.586,
+          "global_ssim": 0.947045,
+          "sharpness_ratio": 0.3507,
+          "luminance_contrast_ratio": 0.9602,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000010.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 35.7559,
+          "mean_absolute_error_0_255": 2.8794,
+          "global_ssim": 0.962643,
+          "sharpness_ratio": 0.4048,
+          "luminance_contrast_ratio": 0.9553,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000020.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 34.559,
+          "mean_absolute_error_0_255": 3.0436,
+          "global_ssim": 0.973459,
+          "sharpness_ratio": 0.508,
+          "luminance_contrast_ratio": 0.9699,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000030.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 32.8028,
+          "mean_absolute_error_0_255": 3.5916,
+          "global_ssim": 0.972276,
+          "sharpness_ratio": 0.4315,
+          "luminance_contrast_ratio": 0.9885,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000040.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 31.8015,
+          "mean_absolute_error_0_255": 4.7819,
+          "global_ssim": 0.974605,
+          "sharpness_ratio": 0.4875,
+          "luminance_contrast_ratio": 0.9992,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000050.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 29.6088,
+          "mean_absolute_error_0_255": 6.4169,
+          "global_ssim": 0.969377,
+          "sharpness_ratio": 0.4524,
+          "luminance_contrast_ratio": 0.9877,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000060.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 31.4192,
+          "mean_absolute_error_0_255": 5.0243,
+          "global_ssim": 0.972253,
+          "sharpness_ratio": 0.492,
+          "luminance_contrast_ratio": 0.9958,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000070.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 25.8024,
+          "mean_absolute_error_0_255": 11.2916,
+          "global_ssim": 0.944545,
+          "sharpness_ratio": 0.4343,
+          "luminance_contrast_ratio": 0.934,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000080.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 31.1408,
+          "mean_absolute_error_0_255": 4.7938,
+          "global_ssim": 0.94856,
+          "sharpness_ratio": 0.4372,
+          "luminance_contrast_ratio": 0.9905,
+          "excess_dark_pixel_fraction": 0.0
+        }
+      ]
+    },
+    {
+      "iteration": 16000,
+      "held_out_image_count": 9,
+      "mean_psnr_db": 31.8056,
+      "median_psnr_db": 31.3338,
+      "mean_absolute_error_0_255": 5.1354,
+      "mean_global_ssim": 0.963893,
+      "mean_sharpness_ratio": 0.4529,
+      "mean_luminance_contrast_ratio": 0.9806,
+      "mean_excess_dark_pixel_fraction": 0.0,
+      "images": [
+        {
+          "image": "000000.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 34.2204,
+          "mean_absolute_error_0_255": 3.4697,
+          "global_ssim": 0.951429,
+          "sharpness_ratio": 0.3607,
+          "luminance_contrast_ratio": 0.9748,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000010.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 35.8841,
+          "mean_absolute_error_0_255": 2.8447,
+          "global_ssim": 0.964424,
+          "sharpness_ratio": 0.4137,
+          "luminance_contrast_ratio": 0.9647,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000020.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 34.4639,
+          "mean_absolute_error_0_255": 3.0877,
+          "global_ssim": 0.972928,
+          "sharpness_ratio": 0.5089,
+          "luminance_contrast_ratio": 0.9677,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000030.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 31.3338,
+          "mean_absolute_error_0_255": 4.8561,
+          "global_ssim": 0.970064,
+          "sharpness_ratio": 0.4393,
+          "luminance_contrast_ratio": 0.9991,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000040.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 31.0697,
+          "mean_absolute_error_0_255": 5.4566,
+          "global_ssim": 0.974743,
+          "sharpness_ratio": 0.484,
+          "luminance_contrast_ratio": 0.9941,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000050.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 29.2388,
+          "mean_absolute_error_0_255": 6.9523,
+          "global_ssim": 0.971003,
+          "sharpness_ratio": 0.4587,
+          "luminance_contrast_ratio": 0.9774,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000060.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 32.5407,
+          "mean_absolute_error_0_255": 4.1769,
+          "global_ssim": 0.97333,
+          "sharpness_ratio": 0.5,
+          "luminance_contrast_ratio": 0.9907,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000070.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 26.3437,
+          "mean_absolute_error_0_255": 10.5528,
+          "global_ssim": 0.948064,
+          "sharpness_ratio": 0.465,
+          "luminance_contrast_ratio": 0.9574,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000080.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 31.1553,
+          "mean_absolute_error_0_255": 4.8218,
+          "global_ssim": 0.949049,
+          "sharpness_ratio": 0.446,
+          "luminance_contrast_ratio": 0.9999,
+          "excess_dark_pixel_fraction": 0.0
+        }
+      ]
+    },
+    {
+      "iteration": 18000,
+      "held_out_image_count": 9,
+      "mean_psnr_db": 32.2906,
+      "median_psnr_db": 32.745,
+      "mean_absolute_error_0_255": 4.6544,
+      "mean_global_ssim": 0.96373,
+      "mean_sharpness_ratio": 0.4642,
+      "mean_luminance_contrast_ratio": 0.9831,
+      "mean_excess_dark_pixel_fraction": 0.0,
+      "images": [
+        {
+          "image": "000000.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 33.7285,
+          "mean_absolute_error_0_255": 3.7816,
+          "global_ssim": 0.947767,
+          "sharpness_ratio": 0.3769,
+          "luminance_contrast_ratio": 1.0016,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000010.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 35.789,
+          "mean_absolute_error_0_255": 2.861,
+          "global_ssim": 0.963535,
+          "sharpness_ratio": 0.4288,
+          "luminance_contrast_ratio": 0.9647,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000020.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 34.4517,
+          "mean_absolute_error_0_255": 3.0712,
+          "global_ssim": 0.972552,
+          "sharpness_ratio": 0.522,
+          "luminance_contrast_ratio": 0.9681,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000030.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 32.7584,
+          "mean_absolute_error_0_255": 3.582,
+          "global_ssim": 0.971481,
+          "sharpness_ratio": 0.4344,
+          "luminance_contrast_ratio": 0.9921,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000040.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 32.745,
+          "mean_absolute_error_0_255": 4.1175,
+          "global_ssim": 0.976515,
+          "sharpness_ratio": 0.5034,
+          "luminance_contrast_ratio": 0.9932,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000050.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 30.5156,
+          "mean_absolute_error_0_255": 5.7998,
+          "global_ssim": 0.971649,
+          "sharpness_ratio": 0.4634,
+          "luminance_contrast_ratio": 0.974,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000060.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 32.5105,
+          "mean_absolute_error_0_255": 4.1682,
+          "global_ssim": 0.970976,
+          "sharpness_ratio": 0.5044,
+          "luminance_contrast_ratio": 0.9716,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000070.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 26.9762,
+          "mean_absolute_error_0_255": 9.6956,
+          "global_ssim": 0.950292,
+          "sharpness_ratio": 0.4785,
+          "luminance_contrast_ratio": 0.9711,
+          "excess_dark_pixel_fraction": 0.0
+        },
+        {
+          "image": "000080.png",
+          "width": 1920,
+          "height": 1076,
+          "psnr_db": 31.1407,
+          "mean_absolute_error_0_255": 4.8128,
+          "global_ssim": 0.9488,
+          "sharpness_ratio": 0.4659,
+          "luminance_contrast_ratio": 1.0113,
+          "excess_dark_pixel_fraction": 0.0
+        }
+      ]
+    }
+  ]
+}

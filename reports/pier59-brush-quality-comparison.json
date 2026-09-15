@@ -1,0 +1,78 @@
+{
+  "objective": "Increase close-view detail while reducing haze without introducing visible holes.",
+  "selection": "pier59-brush-high-quality-18k",
+  "selection_rationale": "The moderate opacity and scale regularization preview slightly outperformed the detail-only preview on PSNR, SSIM, and contrast with zero excess-dark pixels. Extending that preset to 18k steps at full resolution produced the strongest sharpness, fidelity, and contrast measurements while retaining zero excess-dark pixels.",
+  "runs": [
+    {
+      "name": "pier59-brush-preview-10k",
+      "role": "original baseline",
+      "steps": 10000,
+      "render_resolution": [1536, 861],
+      "final_splats": 330908,
+      "wall_clock_seconds": 228.66,
+      "mean_psnr_db": 32.0507,
+      "mean_absolute_error_0_255": 4.6879,
+      "mean_global_ssim": 0.959408,
+      "mean_sharpness_ratio": 0.3429,
+      "mean_luminance_contrast_ratio": 0.9752,
+      "mean_excess_dark_pixel_fraction": 0.0
+    },
+    {
+      "name": "pier59-brush-detail-preview-7k",
+      "role": "full-resolution detail preview",
+      "steps": 7000,
+      "render_resolution": [1920, 1076],
+      "final_splats": 1152559,
+      "wall_clock_seconds": 354.833,
+      "mean_psnr_db": 32.0005,
+      "mean_absolute_error_0_255": 5.0008,
+      "mean_global_ssim": 0.960247,
+      "mean_sharpness_ratio": 0.3965,
+      "mean_luminance_contrast_ratio": 0.9648,
+      "mean_excess_dark_pixel_fraction": 0.0
+    },
+    {
+      "name": "pier59-brush-dehaze-preview-7k",
+      "role": "moderately regularized full-resolution preview",
+      "steps": 7000,
+      "render_resolution": [1920, 1076],
+      "final_splats": 1100445,
+      "wall_clock_seconds": 446.739,
+      "mean_psnr_db": 32.0397,
+      "mean_absolute_error_0_255": 4.9721,
+      "mean_global_ssim": 0.960287,
+      "mean_sharpness_ratio": 0.3939,
+      "mean_luminance_contrast_ratio": 0.9678,
+      "mean_excess_dark_pixel_fraction": 0.0
+    },
+    {
+      "name": "pier59-brush-high-quality-18k",
+      "role": "selected high-quality result",
+      "steps": 18000,
+      "render_resolution": [1920, 1076],
+      "final_splats": 1500000,
+      "wall_clock_seconds": 995.617,
+      "mean_psnr_db": 32.2906,
+      "mean_absolute_error_0_255": 4.6544,
+      "mean_global_ssim": 0.96373,
+      "mean_sharpness_ratio": 0.4642,
+      "mean_luminance_contrast_ratio": 0.9831,
+      "mean_excess_dark_pixel_fraction": 0.0
+    }
+  ],
+  "baseline_to_selected_change": {
+    "mean_psnr_db": 0.2399,
+    "mean_absolute_error_0_255": -0.0335,
+    "mean_global_ssim": 0.004322,
+    "mean_sharpness_ratio_relative_percent": 35.37,
+    "mean_luminance_contrast_ratio": 0.0079,
+    "mean_excess_dark_pixel_fraction": 0.0
+  },
+  "visual_assessment": {
+    "held_out_views": "The selected run preserves complete coverage and produces visibly crisper shell and rock edges than the original 10k baseline.",
+    "haze": "Moderate opacity and scale regularization reduces soft translucent buildup without visible black holes in the held-out views.",
+    "limitations": "Extreme close-ups and viewpoints far outside the source camera path remain limited by the 1920x1080 source video, underwater backscatter, and unseen surfaces."
+  },
+  "local_comparison_image": "data/training/pier59-brush-high-quality-comparison.jpg",
+  "artifacts_committed": false
+}

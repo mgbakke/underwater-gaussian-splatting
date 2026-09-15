@@ -38,6 +38,27 @@ def global_ssim(reference: np.ndarray, rendered: np.ndarray) -> float:
     return float(np.mean(scores))
 
 
+def luminance(image: np.ndarray) -> np.ndarray:
+    return (
+        image[..., 0] * 0.2126
+        + image[..., 1] * 0.7152
+        + image[..., 2] * 0.0722
+    )
+
+
+def laplacian_variance(image: np.ndarray) -> float:
+    gray = luminance(image)
+    center = gray[1:-1, 1:-1]
+    laplacian = (
+        gray[:-2, 1:-1]
+        + gray[2:, 1:-1]
+        + gray[1:-1, :-2]
+        + gray[1:-1, 2:]
+        - 4.0 * center
+    )
+    return float(np.var(laplacian))
+
+
 def aggregate(records: list[dict[str, Any]]) -> dict[str, float]:
     return {
         "mean_psnr_db": round(statistics.mean(item["psnr_db"] for item in records), 4),
@@ -50,6 +71,19 @@ def aggregate(records: list[dict[str, Any]]) -> dict[str, float]:
         ),
         "mean_global_ssim": round(
             statistics.mean(item["global_ssim"] for item in records), 6
+        ),
+        "mean_sharpness_ratio": round(
+            statistics.mean(item["sharpness_ratio"] for item in records), 4
+        ),
+        "mean_luminance_contrast_ratio": round(
+            statistics.mean(item["luminance_contrast_ratio"] for item in records),
+            4,
+        ),
+        "mean_excess_dark_pixel_fraction": round(
+            statistics.mean(
+                item["excess_dark_pixel_fraction"] for item in records
+            ),
+            6,
         ),
     }
 
@@ -72,16 +106,19 @@ def main() -> None:
         default=ROOT / "reports/pier59-brush-evaluation.json",
     )
     args = parser.parse_args()
+    training_dir = args.training_dir.resolve()
+    ground_truth_dir = args.ground_truth_dir.resolve()
+    report_path = args.report.resolve()
 
     stages = []
     for evaluation_dir in sorted(
-        args.training_dir.glob("eval_*"),
+        training_dir.glob("eval_*"),
         key=lambda path: int(path.name.split("_", 1)[1]),
     ):
         iteration = int(evaluation_dir.name.split("_", 1)[1])
         records = []
         for rendered_path in sorted(evaluation_dir.glob("*.png")):
-            reference_path = args.ground_truth_dir / f"{rendered_path.stem}.jpg"
+            reference_path = ground_truth_dir / f"{rendered_path.stem}.jpg"
             if not reference_path.is_file():
                 raise SystemExit(f"Missing held-out source image: {reference_path}")
             with Image.open(rendered_path) as rendered_image:
@@ -94,6 +131,12 @@ def main() -> None:
             difference = reference - rendered
             mse = float(np.mean(difference * difference))
             psnr = float("inf") if mse == 0 else 10.0 * math.log10(255.0**2 / mse)
+            reference_luma = luminance(reference)
+            rendered_luma = luminance(rendered)
+            reference_sharpness = laplacian_variance(reference)
+            rendered_sharpness = laplacian_variance(rendered)
+            reference_contrast = float(np.std(reference_luma))
+            rendered_contrast = float(np.std(rendered_luma))
             records.append(
                 {
                     "image": rendered_path.name,
@@ -104,6 +147,20 @@ def main() -> None:
                         float(np.mean(np.abs(difference))), 4
                     ),
                     "global_ssim": round(global_ssim(reference, rendered), 6),
+                    "sharpness_ratio": round(
+                        rendered_sharpness / reference_sharpness, 4
+                    ),
+                    "luminance_contrast_ratio": round(
+                        rendered_contrast / reference_contrast, 4
+                    ),
+                    "excess_dark_pixel_fraction": round(
+                        float(
+                            np.mean(
+                                (rendered_luma < 10.0) & (reference_luma > 30.0)
+                            )
+                        ),
+                        6,
+                    ),
                 }
             )
         stages.append(
@@ -116,17 +173,20 @@ def main() -> None:
         )
     report = {
         "generated_at": datetime.now().astimezone().isoformat(timespec="seconds"),
-        "training_directory": str(args.training_dir.relative_to(ROOT)),
-        "ground_truth_directory": str(args.ground_truth_dir.relative_to(ROOT)),
+        "training_directory": str(training_dir.relative_to(ROOT)),
+        "ground_truth_directory": str(ground_truth_dir.relative_to(ROOT)),
         "metrics": {
             "psnr": "RGB PSNR after Lanczos-resizing ground truth to render dimensions.",
             "mean_absolute_error": "Mean absolute RGB error on the 0-255 scale.",
             "global_ssim": "Global per-channel SSIM averaged over RGB; a lightweight proxy, not windowed SSIM.",
+            "sharpness_ratio": "Rendered/reference luminance Laplacian variance. Values below 1 indicate softer output.",
+            "luminance_contrast_ratio": "Rendered/reference luminance standard deviation. Values below 1 indicate reduced contrast.",
+            "excess_dark_pixel_fraction": "Fraction of pixels below luminance 10 where ground truth exceeds 30; a conservative hole indicator.",
         },
         "stages": stages,
     }
-    args.report.parent.mkdir(parents=True, exist_ok=True)
-    with args.report.open("w", encoding="utf-8") as handle:
+    report_path.parent.mkdir(parents=True, exist_ok=True)
+    with report_path.open("w", encoding="utf-8") as handle:
         json.dump(report, handle, indent=2)
         handle.write("\n")
     print(
