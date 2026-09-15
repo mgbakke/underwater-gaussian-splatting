@@ -1,0 +1,1153 @@
+{
+  "directory": "data/raw/huggingface/set02-2025-01-22-095808",
+  "generated_at": "2026-09-14T18:01:14-07:00",
+  "image_count": 59,
+  "total_bytes": 368939179,
+  "dimensions": {
+    "4606x4030": 59
+  },
+  "exact_duplicate_groups": [],
+  "adjacent_dhash_hamming": {
+    "minimum": 8,
+    "median": 25.0,
+    "maximum": 38
+  },
+  "blur_laplacian_variance": {
+    "minimum": 1021.696,
+    "median": 1256.042,
+    "maximum": 1787.964
+  },
+  "temporal_spacing_seconds": {
+    "expected": 3.0,
+    "values": {
+      "3.0": 57,
+      "4.0": 1
+    },
+    "minimum": 3.0,
+    "median": 3.0,
+    "maximum": 4.0
+  },
+  "files": [
+    {
+      "file": "2025_01_22_09-58-08.jpg",
+      "bytes": 6243431,
+      "sha256": "6597e34a52dd4925270ffa5e492e4a71a5ad088d7bf426ccb837f1691cf013ab",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1248.594,
+      "mean_rgb": [
+        123.578,
+        130.322,
+        123.058
+      ],
+      "stddev_rgb": [
+        41.944,
+        36.144,
+        33.793
+      ],
+      "dhash_64": "d8b0b8e8d27034dc"
+    },
+    {
+      "file": "2025_01_22_09-58-11.jpg",
+      "bytes": 6292953,
+      "sha256": "cb23b0004f5564f67f05b7cd57297a53f48b9fcfdd426683b78aa8634e52ce5a",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1270.149,
+      "mean_rgb": [
+        119.335,
+        128.613,
+        121.328
+      ],
+      "stddev_rgb": [
+        41.286,
+        35.564,
+        33.012
+      ],
+      "dhash_64": "98b0b86851b0b04c"
+    },
+    {
+      "file": "2025_01_22_09-58-14.jpg",
+      "bytes": 6330976,
+      "sha256": "07df4473bf8d2ef162d01483da78fa8abc90bc9f197436167d1b65e10a9c6138",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1229.27,
+      "mean_rgb": [
+        104.876,
+        119.533,
+        112.322
+      ],
+      "stddev_rgb": [
+        38.836,
+        33.534,
+        30.473
+      ],
+      "dhash_64": "c890d868d23070c8"
+    },
+    {
+      "file": "2025_01_22_09-58-17.jpg",
+      "bytes": 6341636,
+      "sha256": "3e1ef3285bdf5d2db8eab72106ddcb7db43afdb7a320f12023f571d3ef113118",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1254.501,
+      "mean_rgb": [
+        107.227,
+        120.198,
+        113.079
+      ],
+      "stddev_rgb": [
+        39.181,
+        33.881,
+        30.78
+      ],
+      "dhash_64": "8890e8f0b230d8cc"
+    },
+    {
+      "file": "2025_01_22_09-58-20.jpg",
+      "bytes": 6389368,
+      "sha256": "d1090af196276a90d6111d84f8e13fe4524ff390ba930d7af05c5317a69e918c",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1262.677,
+      "mean_rgb": [
+        109.659,
+        120.655,
+        113.339
+      ],
+      "stddev_rgb": [
+        39.258,
+        33.717,
+        30.632
+      ],
+      "dhash_64": "b09868d23074cca0"
+    },
+    {
+      "file": "2025_01_22_09-58-23.jpg",
+      "bytes": 6344448,
+      "sha256": "704aab94f6362642e0c918e0c828dbd9ef533411bd1c6631f1f108d829338ad6",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1250.464,
+      "mean_rgb": [
+        109.657,
+        121.52,
+        114.054
+      ],
+      "stddev_rgb": [
+        39.383,
+        33.922,
+        30.834
+      ],
+      "dhash_64": "90c868f230d4ccaa"
+    },
+    {
+      "file": "2025_01_22_09-58-26.jpg",
+      "bytes": 6292150,
+      "sha256": "316baeb936f321a271f0941093a6b09deddb3bb1debd06eddab28dff2bf0dbcd",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1254.116,
+      "mean_rgb": [
+        108.107,
+        123.806,
+        116.764
+      ],
+      "stddev_rgb": [
+        41.102,
+        35.411,
+        32.674
+      ],
+      "dhash_64": "c8a8b4c8e8702229"
+    },
+    {
+      "file": "2025_01_22_09-58-29.jpg",
+      "bytes": 6219101,
+      "sha256": "317a6f0e42e82ecaded178383a5b224225c62e7cfec3b4dec5e617f27ccd25d9",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1259.484,
+      "mean_rgb": [
+        106.111,
+        123.735,
+        116.883
+      ],
+      "stddev_rgb": [
+        42.5,
+        36.786,
+        34.301
+      ],
+      "dhash_64": "e0c8caa8b4d0f8e4"
+    },
+    {
+      "file": "2025_01_22_09-58-32.jpg",
+      "bytes": 6273826,
+      "sha256": "24190862af9c490bbc678f8da5c984647d1aa50ac28df8e95b973253b18a18ff",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1297.5,
+      "mean_rgb": [
+        104.488,
+        123.825,
+        117.843
+      ],
+      "stddev_rgb": [
+        42.959,
+        37.784,
+        36.063
+      ],
+      "dhash_64": "6869e0a89a5469ac"
+    },
+    {
+      "file": "2025_01_22_09-58-35.jpg",
+      "bytes": 6227299,
+      "sha256": "2b3682335ac80ad8e711418fd74b876dedcecea29a557a5e633e89f4d2ea3418",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1280.44,
+      "mean_rgb": [
+        102.645,
+        122.029,
+        117.335
+      ],
+      "stddev_rgb": [
+        41.761,
+        37.93,
+        36.163
+      ],
+      "dhash_64": "e4ce4a49c0a89055"
+    },
+    {
+      "file": "2025_01_22_09-58-38.jpg",
+      "bytes": 6157327,
+      "sha256": "adfd5275eda4210e889ecb1fdc7d0dd42ed4affc7da48b9741e6a19e4bae1eaa",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1256.042,
+      "mean_rgb": [
+        102.36,
+        121.229,
+        116.964
+      ],
+      "stddev_rgb": [
+        41.215,
+        37.41,
+        35.276
+      ],
+      "dhash_64": "a0c4c64e4959ccb8"
+    },
+    {
+      "file": "2025_01_22_09-58-41.jpg",
+      "bytes": 6098725,
+      "sha256": "f85ea85762054fbe007dd1cd57439d5787392b9a29bfbbfeab79711fab80734a",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1243.086,
+      "mean_rgb": [
+        101.25,
+        119.502,
+        115.074
+      ],
+      "stddev_rgb": [
+        41.658,
+        37.353,
+        34.478
+      ],
+      "dhash_64": "c981a0a4ccce4959"
+    },
+    {
+      "file": "2025_01_22_09-58-44.jpg",
+      "bytes": 6112035,
+      "sha256": "570c02fd0c6f94019c71a8c659660ba252c56149358c1e13d6238c55d6990771",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1267.269,
+      "mean_rgb": [
+        102.186,
+        119.839,
+        115.858
+      ],
+      "stddev_rgb": [
+        40.917,
+        36.569,
+        33.399
+      ],
+      "dhash_64": "d0dcd8a9a0a8c49c"
+    },
+    {
+      "file": "2025_01_22_09-58-47.jpg",
+      "bytes": 6066784,
+      "sha256": "34659d84961bcae7d4ecda021f4a3300cec69a8a6c9321568c2de079c31f7162",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1259.67,
+      "mean_rgb": [
+        101.604,
+        120.16,
+        116.102
+      ],
+      "stddev_rgb": [
+        41.08,
+        36.756,
+        33.443
+      ],
+      "dhash_64": "68e0f0dc98c988e8"
+    },
+    {
+      "file": "2025_01_22_09-58-50.jpg",
+      "bytes": 6043931,
+      "sha256": "1e31770558c760ce698dc2455fa21e73fdd6e0a4bb5237fc320ce90d6213c7bd",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1233.182,
+      "mean_rgb": [
+        100.744,
+        120.461,
+        116.242
+      ],
+      "stddev_rgb": [
+        41.328,
+        36.856,
+        33.758
+      ],
+      "dhash_64": "b4f068a0e094b8d2"
+    },
+    {
+      "file": "2025_01_22_09-58-53.jpg",
+      "bytes": 6031724,
+      "sha256": "ad7975d9f3220e735841a8cd8a9e848931842c1dd5bca7d0e07520da745f57e1",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1232.747,
+      "mean_rgb": [
+        104.359,
+        122.946,
+        117.961
+      ],
+      "stddev_rgb": [
+        43.094,
+        37.835,
+        34.542
+      ],
+      "dhash_64": "a8e4f4f4e0e2e0a8"
+    },
+    {
+      "file": "2025_01_22_09-58-56.jpg",
+      "bytes": 6129883,
+      "sha256": "bb22353ffbf0e7b7ae38704ac3f7a2cd6c30f12e797b707c22c35a1b980be44c",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1229.061,
+      "mean_rgb": [
+        101.924,
+        121.158,
+        115.096
+      ],
+      "stddev_rgb": [
+        43.183,
+        37.148,
+        33.389
+      ],
+      "dhash_64": "d0c888c8c4b4e2e2"
+    },
+    {
+      "file": "2025_01_22_09-58-59.jpg",
+      "bytes": 6143389,
+      "sha256": "5587fd07e01bd3ad698af72e92c4c360f92ca5368beec0a3a30a1ec7c1b92ef4",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1209.578,
+      "mean_rgb": [
+        100.676,
+        120.851,
+        114.103
+      ],
+      "stddev_rgb": [
+        42.075,
+        35.97,
+        32.109
+      ],
+      "dhash_64": "a0e8d0d0c8c8c4f0"
+    },
+    {
+      "file": "2025_01_22_09-59-02.jpg",
+      "bytes": 6059446,
+      "sha256": "44a0eeccb71f6912396f57d017624d925a2a69608aad2974251cb74192f5ff89",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1130.839,
+      "mean_rgb": [
+        100.934,
+        120.731,
+        114.557
+      ],
+      "stddev_rgb": [
+        41.177,
+        35.521,
+        31.626
+      ],
+      "dhash_64": "988ca0e0d0d0c0c8"
+    },
+    {
+      "file": "2025_01_22_09-59-05.jpg",
+      "bytes": 5937294,
+      "sha256": "f2870238861189de03e3816345b9b38905c5700eced0f822e3aa62ed991f3b24",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1070.268,
+      "mean_rgb": [
+        102.094,
+        122.202,
+        115.969
+      ],
+      "stddev_rgb": [
+        40.964,
+        35.952,
+        32.302
+      ],
+      "dhash_64": "1860709888a0d0d0"
+    },
+    {
+      "file": "2025_01_22_09-59-08.jpg",
+      "bytes": 5974260,
+      "sha256": "09480f4cbc3ea88f2b56c291fc20bd47a648b6396498ab8bf9fb6d3e517d494d",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1050.84,
+      "mean_rgb": [
+        101.042,
+        122.206,
+        115.523
+      ],
+      "stddev_rgb": [
+        41.987,
+        36.092,
+        32.714
+      ],
+      "dhash_64": "84c8e810603888a0"
+    },
+    {
+      "file": "2025_01_22_09-59-11.jpg",
+      "bytes": 5932897,
+      "sha256": "b1fa1695c3437ae84a06ad33a2fe788756c55b83c7b5c5e94c79aefad46c75ac",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1022.961,
+      "mean_rgb": [
+        99.331,
+        121.568,
+        113.783
+      ],
+      "stddev_rgb": [
+        44.032,
+        36.852,
+        34.191
+      ],
+      "dhash_64": "98684882c8906070"
+    },
+    {
+      "file": "2025_01_22_09-59-14.jpg",
+      "bytes": 5972635,
+      "sha256": "9d36337042c2837433fb2f551db77600c7fe9d4a64716f5fbafc7daa73a51f24",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1021.696,
+      "mean_rgb": [
+        100.898,
+        123.915,
+        115.228
+      ],
+      "stddev_rgb": [
+        43.18,
+        35.968,
+        33.753
+      ],
+      "dhash_64": "b88998684088c85a"
+    },
+    {
+      "file": "2025_01_22_09-59-17.jpg",
+      "bytes": 6015554,
+      "sha256": "11bf2f9d4683e0bef406a211343226d38b0cb5787dc1ac33ad68ab2d62554f71",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1047.154,
+      "mean_rgb": [
+        101.958,
+        123.911,
+        115.534
+      ],
+      "stddev_rgb": [
+        43.271,
+        36.321,
+        34.322
+      ],
+      "dhash_64": "66c2b9a898b86249"
+    },
+    {
+      "file": "2025_01_22_09-59-20.jpg",
+      "bytes": 6131735,
+      "sha256": "411963977df18e9c0949a121034a52a2f4227c26e60eac8338a13f14292dd598",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1085.935,
+      "mean_rgb": [
+        103.657,
+        125.129,
+        116.139
+      ],
+      "stddev_rgb": [
+        44.565,
+        36.787,
+        34.863
+      ],
+      "dhash_64": "a866c23028981863"
+    },
+    {
+      "file": "2025_01_22_09-59-23.jpg",
+      "bytes": 6111474,
+      "sha256": "4ae590a9d4df8db173f6ba79ad8e0f97015d72dd15ad1eb4a813e1d6f540141d",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1122.55,
+      "mean_rgb": [
+        108.574,
+        128.354,
+        120.227
+      ],
+      "stddev_rgb": [
+        43.674,
+        35.904,
+        33.088
+      ],
+      "dhash_64": "68686864d2782818"
+    },
+    {
+      "file": "2025_01_22_09-59-26.jpg",
+      "bytes": 6137205,
+      "sha256": "382db37371d7896e646396301633e5bf1d91fdb6b60baed01c5a3fb32592bb52",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1181.086,
+      "mean_rgb": [
+        106.652,
+        126.369,
+        119.052
+      ],
+      "stddev_rgb": [
+        43.098,
+        36.376,
+        33.311
+      ],
+      "dhash_64": "1ed2a0c8486c6458"
+    },
+    {
+      "file": "2025_01_22_09-59-29.jpg",
+      "bytes": 6152874,
+      "sha256": "2320854cb7c4954bdfc167612bccf76737f752d7cede6a9b99eeef0b8f603d22",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1200.912,
+      "mean_rgb": [
+        104.884,
+        126.585,
+        119.245
+      ],
+      "stddev_rgb": [
+        42.691,
+        35.928,
+        32.984
+      ],
+      "dhash_64": "e8000c12d0c04860"
+    },
+    {
+      "file": "2025_01_22_09-59-32.jpg",
+      "bytes": 6204142,
+      "sha256": "d67cd2dba3972fd6f5eecd2b341b62bfef7e27ea89cad6f7781fa4bde8787f1b",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1223.573,
+      "mean_rgb": [
+        105.129,
+        128.61,
+        121.267
+      ],
+      "stddev_rgb": [
+        43.156,
+        36.53,
+        33.773
+      ],
+      "dhash_64": "5058a8c00216708a"
+    },
+    {
+      "file": "2025_01_22_09-59-35.jpg",
+      "bytes": 6181358,
+      "sha256": "04a64655cd070f138c986f2f2bfe31d2987a07aa400fee4e1576014ac3671880",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1218.292,
+      "mean_rgb": [
+        105.579,
+        130.143,
+        123.25
+      ],
+      "stddev_rgb": [
+        44.691,
+        38.504,
+        35.68
+      ],
+      "dhash_64": "c8b05058a8d00212"
+    },
+    {
+      "file": "2025_01_22_09-59-38.jpg",
+      "bytes": 6190509,
+      "sha256": "e7654cfd5223e2dda8b9fcb5d789a2ab475ff33211c75ef6c3db26e70802e834",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1258.705,
+      "mean_rgb": [
+        112.441,
+        135.447,
+        128.392
+      ],
+      "stddev_rgb": [
+        45.042,
+        38.7,
+        36.448
+      ],
+      "dhash_64": "9888b0b05008b0ca"
+    },
+    {
+      "file": "2025_01_22_09-59-41.jpg",
+      "bytes": 6219755,
+      "sha256": "678051ceac2c59c2ae127625819ca18e93ec98136268749abdf99a16a5ee78da",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1283.209,
+      "mean_rgb": [
+        115.719,
+        137.956,
+        131.148
+      ],
+      "stddev_rgb": [
+        43.729,
+        38.415,
+        36.119
+      ],
+      "dhash_64": "d8e03098a060d058"
+    },
+    {
+      "file": "2025_01_22_09-59-44.jpg",
+      "bytes": 6207786,
+      "sha256": "2ff7fd8cd219571fbbc8e018f9054fa0082b5143d18ea3b26027c61388c32b0a",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1270.503,
+      "mean_rgb": [
+        118.058,
+        139.916,
+        132.478
+      ],
+      "stddev_rgb": [
+        43.32,
+        37.805,
+        35.453
+      ],
+      "dhash_64": "50b8c0f038c82070"
+    },
+    {
+      "file": "2025_01_22_09-59-47.jpg",
+      "bytes": 6095033,
+      "sha256": "d452efa6e333b720a5401c641281db00e9dff4764d55c81912f4d3eb2a128b0e",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1283.419,
+      "mean_rgb": [
+        108.819,
+        129.549,
+        121.443
+      ],
+      "stddev_rgb": [
+        44.005,
+        38.198,
+        35.709
+      ],
+      "dhash_64": "e89050b080f03070"
+    },
+    {
+      "file": "2025_01_22_09-59-50.jpg",
+      "bytes": 6166594,
+      "sha256": "5cc16165a53de3926be82968fb3b596ec73316ffac2a41967d3b72f8a6d7fbb7",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1267.185,
+      "mean_rgb": [
+        120.383,
+        141.082,
+        133.135
+      ],
+      "stddev_rgb": [
+        44.002,
+        38.449,
+        36.338
+      ],
+      "dhash_64": "d4cce89050b08870"
+    },
+    {
+      "file": "2025_01_22_09-59-53.jpg",
+      "bytes": 6105446,
+      "sha256": "6029290bf67b2775837a0fa6050c2fdfa132f5baf2a91479e560c17a94809948",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1231.823,
+      "mean_rgb": [
+        116.124,
+        135.702,
+        129.291
+      ],
+      "stddev_rgb": [
+        45.237,
+        40.312,
+        38.358
+      ],
+      "dhash_64": "d092d49cc8b0b0d0"
+    },
+    {
+      "file": "2025_01_22_09-59-56.jpg",
+      "bytes": 6177083,
+      "sha256": "4b7f149a6c6158068c57705dbb542fabab9c91021a4df91f8ccda30ad9118470",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1248.044,
+      "mean_rgb": [
+        113.911,
+        132.296,
+        127.691
+      ],
+      "stddev_rgb": [
+        44.743,
+        40.739,
+        38.474
+      ],
+      "dhash_64": "8c9190d2a69498c0"
+    },
+    {
+      "file": "2025_01_22_09-59-59.jpg",
+      "bytes": 6180780,
+      "sha256": "d5c504caba190f3d4e00b18ffba9b83aaca0a6259ff486262d4b354e23831a99",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1245.88,
+      "mean_rgb": [
+        104.267,
+        126.584,
+        122.73
+      ],
+      "stddev_rgb": [
+        45.644,
+        40.791,
+        38.399
+      ],
+      "dhash_64": "4498a88190d2d6d4"
+    },
+    {
+      "file": "2025_01_22_10-00-02.jpg",
+      "bytes": 6166430,
+      "sha256": "8b9407375bde469352e6a95883a6d8dd57de96333f519e09921f3a26a6e0a763",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1226.756,
+      "mean_rgb": [
+        101.436,
+        124.369,
+        120.056
+      ],
+      "stddev_rgb": [
+        47.351,
+        42.096,
+        39.764
+      ],
+      "dhash_64": "9058c4d498a5b0b0"
+    },
+    {
+      "file": "2025_01_22_10-00-05.jpg",
+      "bytes": 6182730,
+      "sha256": "4e0b4135fb775972b6776b4e67e4b073cbc6b3fab42f3fe852880482e069c4e1",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1246.218,
+      "mean_rgb": [
+        107.239,
+        129.232,
+        123.521
+      ],
+      "stddev_rgb": [
+        47.594,
+        41.061,
+        39.571
+      ],
+      "dhash_64": "70e0d058ccc49861"
+    },
+    {
+      "file": "2025_01_22_10-00-08.jpg",
+      "bytes": 6197963,
+      "sha256": "98157b0b367172cd01e6261c1cfac608e58762eff8be126c92f6f555f73829cf",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1229.332,
+      "mean_rgb": [
+        110.074,
+        130.086,
+        122.862
+      ],
+      "stddev_rgb": [
+        50.08,
+        41.464,
+        39.908
+      ],
+      "dhash_64": "90987860c05058cc"
+    },
+    {
+      "file": "2025_01_22_10-00-11.jpg",
+      "bytes": 6190567,
+      "sha256": "c4cf137cf62247f312592da66715b9f9eeb3dbae13c2c3aef6b93af980b7968c",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1228.437,
+      "mean_rgb": [
+        113.38,
+        130.91,
+        123.525
+      ],
+      "stddev_rgb": [
+        46.88,
+        38.923,
+        36.62
+      ],
+      "dhash_64": "30a0989018f0e4d0"
+    },
+    {
+      "file": "2025_01_22_10-00-14.jpg",
+      "bytes": 6199810,
+      "sha256": "35851344502c9ce36df015320cf278eb1272c8c1de0756d13c7d8f7973480a2a",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1276.81,
+      "mean_rgb": [
+        119.562,
+        135.288,
+        128.709
+      ],
+      "stddev_rgb": [
+        43.927,
+        37.371,
+        34.386
+      ],
+      "dhash_64": "64941822a8b09411"
+    },
+    {
+      "file": "2025_01_22_10-00-17.jpg",
+      "bytes": 6297783,
+      "sha256": "84c353f59ce19e18926f5701825a044c8d119d61685378257acc5a30dd5301d3",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1355.977,
+      "mean_rgb": [
+        122.25,
+        137.07,
+        130.658
+      ],
+      "stddev_rgb": [
+        43.987,
+        37.125,
+        34.376
+      ],
+      "dhash_64": "c094449494624479"
+    },
+    {
+      "file": "2025_01_22_10-00-20.jpg",
+      "bytes": 6344525,
+      "sha256": "b5e43867e8d5cc098534e62c8d67e4baaca0f425d127a52ab19cc4daab804398",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1386.4,
+      "mean_rgb": [
+        123.342,
+        137.937,
+        130.751
+      ],
+      "stddev_rgb": [
+        46.378,
+        39.089,
+        36.674
+      ],
+      "dhash_64": "9ce8c8b05464a8e0"
+    },
+    {
+      "file": "2025_01_22_10-00-23.jpg",
+      "bytes": 6464865,
+      "sha256": "000f7f180e650c787666bf06092c0601e457c9a7c75d8895bd58d335a3813a7c",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1482.487,
+      "mean_rgb": [
+        120.403,
+        136.07,
+        128.491
+      ],
+      "stddev_rgb": [
+        48.775,
+        41.114,
+        39.024
+      ],
+      "dhash_64": "d0d058d8c2e0784c"
+    },
+    {
+      "file": "2025_01_22_10-00-26.jpg",
+      "bytes": 6593004,
+      "sha256": "1140dac5ee155ffe93421084b6240a1b66727dbf9509c55a64f89240ce730d2a",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1558.377,
+      "mean_rgb": [
+        119.07,
+        137.125,
+        127.94
+      ],
+      "stddev_rgb": [
+        49.653,
+        41.352,
+        39.165
+      ],
+      "dhash_64": "c8d2d0d070d8d0c0"
+    },
+    {
+      "file": "2025_01_22_10-00-30.jpg",
+      "bytes": 6670769,
+      "sha256": "13752356560013f1ad59d285563175536800ffb347bcc34e5f7ff6209d176ea9",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1623.007,
+      "mean_rgb": [
+        119.94,
+        140.849,
+        130.144
+      ],
+      "stddev_rgb": [
+        51.073,
+        42.517,
+        41.179
+      ],
+      "dhash_64": "e0e8c8d05150dc58"
+    },
+    {
+      "file": "2025_01_22_10-00-33.jpg",
+      "bytes": 6648988,
+      "sha256": "f2c2e617e7cca53e468922774bcba4a58468dd3e94cb572ff681f69621ab70ae",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1650.613,
+      "mean_rgb": [
+        125.887,
+        146.314,
+        135.944
+      ],
+      "stddev_rgb": [
+        50.512,
+        42.15,
+        41.21
+      ],
+      "dhash_64": "6870e0e8c2f050e0"
+    },
+    {
+      "file": "2025_01_22_10-00-36.jpg",
+      "bytes": 6633801,
+      "sha256": "8df34cbc3341f25f239e9a0439866e7863bb09b78697f8e656774834680a6d23",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1787.964,
+      "mean_rgb": [
+        119.63,
+        139.338,
+        128.936
+      ],
+      "stddev_rgb": [
+        47.872,
+        40.339,
+        38.792
+      ],
+      "dhash_64": "62e8c870e0e0c0d0"
+    },
+    {
+      "file": "2025_01_22_10-00-39.jpg",
+      "bytes": 6748481,
+      "sha256": "ebaffb568862daea70a69483ea89046b2b6f090249b6d48c0497530b9e5c16c6",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1760.694,
+      "mean_rgb": [
+        126.231,
+        147.028,
+        137.688
+      ],
+      "stddev_rgb": [
+        44.71,
+        37.555,
+        35.41
+      ],
+      "dhash_64": "c898926868b07060"
+    },
+    {
+      "file": "2025_01_22_10-00-42.jpg",
+      "bytes": 6672372,
+      "sha256": "6408ad58cd94981bd1d50b22c9f3c8c53997b735b973710b80fcceb983521030",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1686.088,
+      "mean_rgb": [
+        121.53,
+        142.836,
+        133.219
+      ],
+      "stddev_rgb": [
+        43.826,
+        36.239,
+        33.797
+      ],
+      "dhash_64": "b478c89094a86868"
+    },
+    {
+      "file": "2025_01_22_10-00-45.jpg",
+      "bytes": 6626633,
+      "sha256": "4fdd4510fd08f490483845f7258901775727074d1f273f4cf493605b41472dfb",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1620.892,
+      "mean_rgb": [
+        119.229,
+        139.804,
+        129.86
+      ],
+      "stddev_rgb": [
+        44.536,
+        36.335,
+        33.225
+      ],
+      "dhash_64": "8cac80b060c01694"
+    },
+    {
+      "file": "2025_01_22_10-00-48.jpg",
+      "bytes": 6516287,
+      "sha256": "6450d47c92560e8de4d81984676fd96addc2719352190639bb9b77e934d2c8b9",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1543.688,
+      "mean_rgb": [
+        116.441,
+        135.173,
+        125.465
+      ],
+      "stddev_rgb": [
+        43.444,
+        35.828,
+        32.242
+      ],
+      "dhash_64": "c6c2888ca4b070c0"
+    },
+    {
+      "file": "2025_01_22_10-00-51.jpg",
+      "bytes": 6476530,
+      "sha256": "d250797b3ce20f221c9e3306fd28fe501af00b4b447b54dba81922d45989877f",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1498.902,
+      "mean_rgb": [
+        113.08,
+        130.949,
+        121.738
+      ],
+      "stddev_rgb": [
+        43.678,
+        36.293,
+        32.415
+      ],
+      "dhash_64": "b0d090c680580ca0"
+    },
+    {
+      "file": "2025_01_22_10-00-54.jpg",
+      "bytes": 6402160,
+      "sha256": "32966f0583ed128dffb6d694b86a6f2edbbd83dff29d8c0d73559f100335fd3b",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1488.644,
+      "mean_rgb": [
+        111.684,
+        129.646,
+        121.762
+      ],
+      "stddev_rgb": [
+        43.977,
+        37.123,
+        33.654
+      ],
+      "dhash_64": "a0901430d094c490"
+    },
+    {
+      "file": "2025_01_22_10-00-57.jpg",
+      "bytes": 6376407,
+      "sha256": "984bcecf9feea0a53f307c82532c00ab8e56a11566378df2164a444b40e5e864",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1487.276,
+      "mean_rgb": [
+        108.262,
+        127.808,
+        120.369
+      ],
+      "stddev_rgb": [
+        44.701,
+        37.472,
+        34.803
+      ],
+      "dhash_64": "64e0c8f0b43470d0"
+    },
+    {
+      "file": "2025_01_22_10-01-00.jpg",
+      "bytes": 6369825,
+      "sha256": "548499bb7672f00be975537b43f980b5bd57e52eb6104ff3ee93cc9773f283de",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1431.437,
+      "mean_rgb": [
+        105.085,
+        125.859,
+        118.144
+      ],
+      "stddev_rgb": [
+        44.995,
+        36.941,
+        34.454
+      ],
+      "dhash_64": "49ccc4e4c0c8f4a4"
+    },
+    {
+      "file": "2025_01_22_10-01-03.jpg",
+      "bytes": 6266403,
+      "sha256": "8c056f43ff0d8689040560f1d040ecdf2d2cbfc5646b2a592863d5ba44b5cd67",
+      "width": 4606,
+      "height": 4030,
+      "blur_laplacian_variance": 1324.513,
+      "mean_rgb": [
+        102.452,
+        123.255,
+        115.922
+      ],
+      "stddev_rgb": [
+        42.664,
+        34.878,
+        32.058
+      ],
+      "dhash_64": "d0b0904c48e0e064"
+    }
+  ]
+}

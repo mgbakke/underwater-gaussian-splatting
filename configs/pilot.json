@@ -1,0 +1,30 @@
+{
+  "acquisition_date": "2026-09-14",
+  "hugging_face": {
+    "dataset": "Seattle-Aquarium/Seattle_Aquarium_benthic_imagery",
+    "revision": "main",
+    "subset": "set02",
+    "variant": "output",
+    "start": "2025_01_22_09-58-08",
+    "end": "2025_01_22_10-01-03",
+    "expected_count": 59,
+    "destination": "data/raw/huggingface/set02-2025-01-22-095808"
+  },
+  "video": {
+    "name": "pier59-downward-mock-transect",
+    "source_page": "https://drive.google.com/file/d/1aWDrqq5DItRglgswjGO79yGcdP1AyOBX/view",
+    "download_url": "https://drive.usercontent.google.com/download?id=1aWDrqq5DItRglgswjGO79yGcdP1AyOBX&export=download&confirm=t",
+    "start_seconds": 120,
+    "duration_seconds": 60,
+    "output_width": 1920,
+    "clip_path": "data/raw/video/pier59-downward-120s-180s-1080p.mp4",
+    "frame_rate": 2,
+    "frames_destination": "data/processed/pier59-downward-120s-180s-2fps"
+  },
+  "colmap": {
+    "destination": "data/colmap"
+  },
+  "reports": {
+    "directory": "reports"
+  }
+}

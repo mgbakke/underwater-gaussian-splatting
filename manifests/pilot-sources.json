@@ -1,0 +1,106 @@
+{
+  "schema_version": 1,
+  "acquisition_date": "2026-09-14",
+  "generated_media_committed": false,
+  "sources": [
+    {
+      "id": "seattle-aquarium-benthic-set02-pilot",
+      "status": "collected_and_validated",
+      "source_url": "https://huggingface.co/datasets/Seattle-Aquarium/Seattle_Aquarium_benthic_imagery",
+      "download_base_url": "https://huggingface.co/datasets/Seattle-Aquarium/Seattle_Aquarium_benthic_imagery/resolve/main/",
+      "attribution": "Seattle Aquarium Coastal Climate Resilience",
+      "license": {
+        "spdx": "CC-BY-NC-4.0",
+        "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+        "notes": "Attribution required; non-commercial use only; identify adaptations."
+      },
+      "selection": {
+        "directory": "set02/output",
+        "first_file": "2025_01_22_09-58-08.jpg",
+        "last_file": "2025_01_22_10-01-03.jpg",
+        "frame_count": 59,
+        "dimensions": {
+          "width": 4606,
+          "height": 4030
+        },
+        "timestamp_spacing_seconds": {
+          "3": 57,
+          "4": 1
+        },
+        "rationale": "Continuous non-reject run with predominantly static gravel, shell hash, and rock texture; less moving macroalgae than visually compared set01 runs. Three-second cadence is sparse and must be tested in camera registration."
+      },
+      "local_collection": {
+        "path": "data/raw/huggingface/set02-2025-01-22-095808",
+        "total_bytes": 368939179,
+        "file_checksum_algorithm": "SHA-256",
+        "file_checksums": "reports/huggingface-quality.json",
+        "aggregate_checksum_definition": "SHA-256 over each sorted UTF-8 filename, NUL, lowercase file SHA-256, newline",
+        "aggregate_sha256": "d06853104fced574dcc90668bbe034b6f4bfdba8e4428db36609692815cf4a60"
+      },
+      "quality_summary": {
+        "exact_duplicate_groups": 0,
+        "adjacent_dhash_hamming_min_median_max": [8, 25.0, 38],
+        "blur_laplacian_variance_min_median_max": [1021.696, 1256.042, 1787.964],
+        "report": "reports/huggingface-quality.json"
+      }
+    },
+    {
+      "id": "pier59-downward-mock-transect-pilot",
+      "status": "download_blocked_after_partial_validation",
+      "source_url": "https://drive.google.com/file/d/1aWDrqq5DItRglgswjGO79yGcdP1AyOBX/view",
+      "index_url": "https://github.com/zhrandell/Seattle_Aquarium_ROV_development/blob/main/ROV_videos.md",
+      "attribution": "Seattle Aquarium ROV Nereo/Lutris program",
+      "license": {
+        "spdx": "NOASSERTION",
+        "notes": "The public ROV index does not state a license. Do not apply the Hugging Face dataset license to this video; verify permissions with Seattle Aquarium before use or redistribution."
+      },
+      "source_metadata": {
+        "filename": "2022_6_23_downward.mp4",
+        "bytes": 2156206620,
+        "duration_seconds": 353.59,
+        "width": 3840,
+        "height": 2160,
+        "frame_rate": 29.97,
+        "video_codec": "H.264 High",
+        "audio_codec": "AAC",
+        "source_sha256": null
+      },
+      "intended_selection": {
+        "start_seconds": 120,
+        "duration_seconds": 60,
+        "output_width": 1920,
+        "frame_rate": 2,
+        "expected_frame_count": 120,
+        "rationale": "User-preferred downward light/mock-transect candidate; representative samples showed shell-rich static substrate and fixed structure with denser temporal overlap than the still-image sequence."
+      },
+      "validation": {
+        "metadata_probe": "successful",
+        "representative_frames_inspected": 3,
+        "direct_trim": "blocked_by_Google_Drive_too_many_users_public_quota",
+        "gdown_retry": "same_public_quota_block",
+        "range_fallback_bytes_transferred_before_host_rejection": 1644167168,
+        "partial_source_deleted": true,
+        "retained_clip_bytes": 0,
+        "extracted_frame_count": 0
+      }
+    }
+  ],
+  "optional_tool_references": [
+    {"name": "Nerfstudio Splatfacto / gsplat", "url": "https://github.com/nerfstudio-project/gsplat", "license": "Apache-2.0"},
+    {"name": "graphdeco gaussian-splatting", "url": "https://github.com/graphdeco-inria/gaussian-splatting", "license": "Custom non-commercial research/evaluation; verify current terms"},
+    {"name": "COLMAP", "url": "https://github.com/colmap/colmap", "license": "Custom BSD-style; verify current files"},
+    {"name": "GLOMAP", "url": "https://github.com/colmap/glomap", "license": "BSD-3-Clause"},
+    {"name": "VGGT Factor Refinement", "url": "https://github.com/jashshah999/vggt-factor-refinement", "license": "NOASSERTION; verify before integration"},
+    {"name": "splatreg", "url": "https://github.com/Archerkattri/splatreg", "license": "BSD-3-Clause"},
+    {"name": "SuperSplat", "url": "https://github.com/playcanvas/supersplat", "license": "MIT"},
+    {"name": "SplatTransform", "url": "https://github.com/playcanvas/splat-transform", "license": "MIT"},
+    {"name": "SPZ", "url": "https://github.com/nianticlabs/spz", "license": "MIT"},
+    {"name": "gsplat.js", "url": "https://github.com/huggingface/gsplat.js", "license": "MIT"},
+    {"name": "SuperSplat Viewer", "url": "https://github.com/playcanvas/supersplat-viewer", "license": "MIT"},
+    {"name": "splaTV", "url": "https://github.com/antimatter15/splaTV", "license": "MIT"},
+    {"name": "Splat Local", "url": "https://github.com/michael-L-i/splat-local", "license": "MIT"},
+    {"name": "Brush", "url": "https://github.com/ArthurBrussee/brush", "license": "Apache-2.0"},
+    {"name": "MetalSplat", "url": "https://github.com/tchauffi/metalsplat", "license": "MIT"},
+    {"name": "LichtFeld Studio", "url": "https://github.com/MrNeRF/LichtFeld-Studio", "license": "GPL-3.0"}
+  ]
+}

@@ -1,0 +1,16 @@
+.DS_Store
+.venv/
+__pycache__/
+*.py[cod]
+
+# Source media and generated datasets must remain local.
+data/raw/**
+data/processed/**
+data/colmap/**
+data/contact-sheets/**
+
+# Preserve the directory layout.
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+!data/colmap/.gitkeep
+
