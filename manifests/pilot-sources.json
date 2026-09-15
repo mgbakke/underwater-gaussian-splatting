@@ -42,11 +42,19 @@
         "adjacent_dhash_hamming_min_median_max": [8, 25.0, 38],
         "blur_laplacian_variance_min_median_max": [1021.696, 1256.042, 1787.964],
         "report": "reports/huggingface-quality.json"
+      },
+      "reconstruction_summary": {
+        "registered_images": 59,
+        "registered_percentage": 100.0,
+        "sparse_points": 30690,
+        "mean_reprojection_error_pixels": 1.0892897425659887,
+        "training_input": "data/sfm/huggingface-set02-pilot/undistorted",
+        "report": "reports/huggingface-sfm.json"
       }
     },
     {
       "id": "pier59-downward-mock-transect-pilot",
-      "status": "download_blocked_after_partial_validation",
+      "status": "collected_and_validated_from_user_supplied_local_download",
       "source_url": "https://drive.google.com/file/d/1aWDrqq5DItRglgswjGO79yGcdP1AyOBX/view",
       "index_url": "https://github.com/zhrandell/Seattle_Aquarium_ROV_development/blob/main/ROV_videos.md",
       "attribution": "Seattle Aquarium ROV Nereo/Lutris program",
@@ -63,25 +71,50 @@
         "frame_rate": 29.97,
         "video_codec": "H.264 High",
         "audio_codec": "AAC",
-        "source_sha256": null
+        "source_sha256": "77dc9775659edde233ca4ef55c6b2687e57c958aed8c7c35130ee69a76725103"
       },
-      "intended_selection": {
-        "start_seconds": 120,
-        "duration_seconds": 60,
+      "selection": {
+        "start_seconds": 136,
+        "duration_seconds": 43,
         "output_width": 1920,
+        "output_height": 1080,
         "frame_rate": 2,
-        "expected_frame_count": 120,
-        "rationale": "User-preferred downward light/mock-transect candidate; representative samples showed shell-rich static substrate and fixed structure with denser temporal overlap than the still-image sequence."
+        "frame_count": 86,
+        "rationale": "The initial 120-180 second window crossed a scene boundary and produced a 32-frame and an 86-frame sparse model. The retained 136-179 second interval isolates the coherent main transect; all 86 frames register together."
       },
-      "validation": {
+      "local_collection": {
+        "clip_path": "data/raw/video/pier59-downward-136s-179s-1080p.mp4",
+        "clip_bytes": 101097612,
+        "clip_sha256": "3b7d67cfa8927fe7b0146384b34505aa8e91a99d5b5a461cf501cf3cc8266b0e",
+        "frames_path": "data/processed/pier59-downward-136s-179s-2fps",
+        "frames_total_bytes": 20918512,
+        "file_checksum_algorithm": "SHA-256",
+        "file_checksums": "reports/video-quality.json",
+        "aggregate_checksum_definition": "SHA-256 over each sorted UTF-8 filename, NUL, lowercase file SHA-256, newline",
+        "aggregate_sha256": "48919e64748cd44ff97277b44b1dd62748c5d9ff7f0320d065ae7e55191112ca"
+      },
+      "quality_summary": {
+        "exact_duplicate_groups": 0,
+        "adjacent_dhash_hamming_min_median_max": [1, 8.0, 20],
+        "blur_laplacian_variance_min_median_max": [113.81, 305.0295, 451.767],
+        "report": "reports/video-quality.json"
+      },
+      "reconstruction_summary": {
+        "registered_images": 86,
+        "registered_percentage": 100.0,
+        "sparse_points": 51369,
+        "mean_reprojection_error_pixels": 0.7170096691782885,
+        "training_input": "data/sfm/pier59-video-pilot/undistorted",
+        "report": "reports/pier59-video-sfm.json"
+      },
+      "acquisition_history": {
         "metadata_probe": "successful",
         "representative_frames_inspected": 3,
         "direct_trim": "blocked_by_Google_Drive_too_many_users_public_quota",
         "gdown_retry": "same_public_quota_block",
         "range_fallback_bytes_transferred_before_host_rejection": 1644167168,
         "partial_source_deleted": true,
-        "retained_clip_bytes": 0,
-        "extracted_frame_count": 0
+        "browser_download_supplied_by_user": true
       }
     }
   ],

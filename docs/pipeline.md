@@ -14,6 +14,13 @@ selected source frames
 
 Run COLMAP/GLOMAP outside this repository once the image pilot is accepted. A typical next pass is feature extraction, sequential or exhaustive matching, mapping, and image undistortion. For underwater footage, inspect registration coverage, reprojection error, and camera trajectory before training; color cast, particles, caustics, moving organisms, and low inter-frame overlap can all produce plausible-looking but incorrect poses.
 
+The feasibility run now produces training-ready, undistorted `PINHOLE` projects under:
+
+- `data/sfm/huggingface-set02-pilot/undistorted`
+- `data/sfm/pier59-video-pilot/undistorted`
+
+Both media-derived directories remain gitignored. Metrics are committed in `reports/*-sfm.json`.
+
 ## Aquarium-specific evaluation order
 
 The following projects are **optional references, not installed or executed by this pilot**. Confirm each upstream license at the pinned revision before integration.
@@ -37,6 +44,8 @@ The local reference machine is a MacBook Pro with an M4 Max, 40-core GPU, Metal 
 - [Splat Local](https://github.com/michael-L-i/splat-local) combines COLMAP/GLOMAP poses with Metal-native [Brush](https://github.com/ArthurBrussee/brush) training and is the first local end-to-end experiment to evaluate.
 - [MetalSplat](https://github.com/tchauffi/metalsplat) is an MIT-licensed PyTorch/Metal experiment worth benchmarking on the M4 Max.
 - [LichtFeld Studio](https://github.com/MrNeRF/LichtFeld-Studio) is a GPL-3.0 desktop training/inspection option, but its CUDA-oriented platform support and integration license must be checked before adoption.
+
+**Recommended local order:** use the checksum-verified prebuilt Brush ARM binary directly on the generated undistorted COLMAP project, then adopt Splat Local's orchestration/UI if desired. Splat Local's setup currently requires Homebrew and `uv`, neither of which was present; a source Brush build also needs Rust 1.88+. The prebuilt Brush v0.3.0 archive is only 41,447,012 bytes and avoids those setup dependencies. MetalSplat is promising but currently requires Python 3.12+, PyTorch 2.14+, and pycolmap 4.2+, making it a less conservative first integration than the verified standalone Brush binary.
 
 The CUDA/Nerfstudio path remains the reproducibility baseline on a compatible remote workstation. Local Metal results should be compared against it using the same registered cameras and held-out views.
 

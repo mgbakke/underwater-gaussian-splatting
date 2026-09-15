@@ -2,15 +2,17 @@
 .venv/
 __pycache__/
 *.py[cod]
+target/
 
 # Source media and generated datasets must remain local.
 data/raw/**
 data/processed/**
 data/colmap/**
+data/sfm/**
 data/contact-sheets/**
 
 # Preserve the directory layout.
 !data/raw/.gitkeep
 !data/processed/.gitkeep
 !data/colmap/.gitkeep
-
+!data/sfm/.gitkeep

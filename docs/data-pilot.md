@@ -20,12 +20,14 @@ The denser-overlap pilot uses the Seattle Aquarium Pier 59 downward-facing “Li
 
 - Source file: `2022_6_23_downward.mp4`
 - Source metadata: 3840 x 2160 H.264, 29.97 fps, 5:53.59, 2,156,206,620 bytes
-- Selected interval: 120–180 seconds
-- Intended retained local clip: 1920-pixel width, H.264 CRF 18, no audio
-- Intended extraction: 2 fps, 120 JPEG frames
+- Selected interval: 136–179 seconds
+- Retained local clip: 43.01 seconds, 1920 x 1080, H.264 CRF 18, no audio, 101,097,612 bytes
+- Extraction: 2 fps, 86 JPEG frames, 20,918,512 bytes
 - Scene: downward view of shell-rich static substrate and fixed structure; moderate green cast and limited peripheral algae
 
-The public endpoint initially supported byte ranges and ffmpeg inspection: source metadata was read and three representative frames around 120 seconds were visually inspected. During the reproducibility run, direct ffmpeg seeking began returning an HTML denial; a bounded 32 MiB range fallback transferred 1,644,167,168 bytes before the host stopped honoring ranges. A separate `gdown` attempt confirmed Google Drive's “too many users have viewed or downloaded this file recently” public quota. The partial source was deleted automatically, so **no video clip or video frames are retained in the pilot**. The downloader remains implemented with direct seeking plus retryable range fallback and accepts `VIDEO_SOURCE=/local/file.mp4` for a browser-downloaded copy. Re-run `trim-video` when the quota resets, then extract and assess frames with the documented commands.
+The public endpoint initially supported byte ranges and ffmpeg inspection, then hit Google Drive's public download quota. The user supplied a browser-downloaded local copy whose SHA-256 is `77dc9775659edde233ca4ef55c6b2687e57c958aed8c7c35130ee69a76725103`. The full 2.16 GB source remains outside the repository.
+
+An initial 120–180 second extraction produced 120 frames but split into two sparse models: frames 0–31 formed an opening scene, while frames 32–117 formed the main transect and frames 118–119 did not join it. The retained interval was therefore tightened to 136–179 seconds. All 86 resulting frames register in one primary model.
 
 **Permission warning:** the ROV index describes stable public download links but does not specify a license for the linked videos. Do not assume the Hugging Face dataset’s CC BY-NC 4.0 license applies to this video. Verify reproduction, redistribution, model-training, and publication permissions with Seattle Aquarium (the source index lists `z.randell@seattleaquarium.org` and `m.williams@seattleaquarium.org`) before use beyond local evaluation.
 
@@ -35,7 +37,7 @@ The committed machine-readable records are:
 
 - [`manifests/pilot-sources.json`](../manifests/pilot-sources.json): provenance, source metadata, acquisition details, checksums, counts, and selection rationale.
 - [`reports/huggingface-quality.json`](../reports/huggingface-quality.json): per-image dimensions, sizes, checksums, blur proxy, RGB statistics, perceptual hashes, duplicates, and timestamp spacing.
-- `reports/video-quality.json`: produced with the same measurements once the blocked video acquisition succeeds; it is intentionally absent from this validation run.
+- [`reports/video-quality.json`](../reports/video-quality.json): the same measurements for the 86 extracted video frames.
 
 Blur is reported as variance of a four-neighbor Laplacian on a downscaled grayscale image. It is a relative sharpness proxy, not a universal pass/fail threshold. Adjacent 64-bit difference-hash distances and exact SHA-256 groups provide lightweight duplicate detection.
 
@@ -63,4 +65,9 @@ Results:
 - 59 deterministically renamed images prepared under `data/colmap/huggingface-set02-pilot/images`.
 - Aggregate selection checksum: `d06853104fced574dcc90668bbe034b6f4bfdba8e4428db36609692815cf4a60`.
 
-The video trim/extract/report/COLMAP path was separately validated with a generated six-second 640 x 360 MP4: a three-second 320 x 180 clip produced six frames at 2 fps, six quality records, and six COLMAP-ready images. Synthetic media and reports were removed after validation. The real Pier 59 source remained blocked by Google Drive’s public quota as described above.
+The video trim/extract/report/COLMAP path was first validated with a generated six-second 640 x 360 MP4: a three-second 320 x 180 clip produced six frames at 2 fps, six quality records, and six COLMAP-ready images. Synthetic media and reports were removed after validation. It then completed on the real Pier 59 local source:
+
+- 86 extracted frames, all 1920 x 1080, with no exact duplicates.
+- Adjacent difference-hash Hamming distance: min 1, median 8, max 20.
+- Laplacian-variance blur proxy: min 113.810, median 305.0295, max 451.767.
+- Aggregate frame checksum: `48919e64748cd44ff97277b44b1dd62748c5d9ff7f0320d065ae7e55191112ca`.

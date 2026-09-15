@@ -14,12 +14,12 @@
     "name": "pier59-downward-mock-transect",
     "source_page": "https://drive.google.com/file/d/1aWDrqq5DItRglgswjGO79yGcdP1AyOBX/view",
     "download_url": "https://drive.usercontent.google.com/download?id=1aWDrqq5DItRglgswjGO79yGcdP1AyOBX&export=download&confirm=t",
-    "start_seconds": 120,
-    "duration_seconds": 60,
+    "start_seconds": 136,
+    "duration_seconds": 43,
     "output_width": 1920,
-    "clip_path": "data/raw/video/pier59-downward-120s-180s-1080p.mp4",
+    "clip_path": "data/raw/video/pier59-downward-136s-179s-1080p.mp4",
     "frame_rate": 2,
-    "frames_destination": "data/processed/pier59-downward-120s-180s-2fps"
+    "frames_destination": "data/processed/pier59-downward-136s-179s-2fps"
   },
   "colmap": {
     "destination": "data/colmap"
